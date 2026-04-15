@@ -1,0 +1,6 @@
+@TisApi_HostAddress = http://localhost:5162
+
+GET {{TisApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
