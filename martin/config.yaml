@@ -1,0 +1,12 @@
+webui: enable-for-all
+
+pmtiles:
+  sources:
+    denmark: /data/denmark.pmtiles
+    gtfs-bus: /data/gtfs/bus-routes.pmtiles
+    gtfs-train: /data/gtfs/train-routes.pmtiles
+    gtfs-metro: /data/gtfs/metro-routes.pmtiles
+    gtfs-ferry: /data/gtfs/ferry-routes.pmtiles
+    gtfs-light-rail: /data/gtfs/light-rail-routes.pmtiles
+    gtfs-bus-stops: /data/gtfs/bus-stops.pmtiles
+    water-ocean: /data/water.pmtiles

@@ -1,6 +1,6 @@
 services:
 
-  # ── Databases ────────────────────────────────────────────────────────────────
+  # Databases
 
   postgres:
     image: postgres:17
@@ -88,7 +88,27 @@ services:
     networks:
       - internal
 
-  # ── Application ──────────────────────────────────────────────────────────────
+  martin:
+    build:
+      context: ./martin
+      dockerfile: Dockerfile
+    container_name: tis-martin
+    restart: unless-stopped
+    command: ["--config", "/config/martin.yaml"]
+    ports:
+      - "${MARTIN_PORT}:3000"
+    volumes:
+      - ./geodata/denmark.pmtiles:/data/denmark.pmtiles:ro
+      - ./geodata/water.pmtiles:/data/water.pmtiles:ro
+      - ./geodata/bus-routes.pmtiles:/data/gtfs/bus-routes.pmtiles:ro
+      - ./geodata/train-routes.pmtiles:/data/gtfs/train-routes.pmtiles:ro
+      - ./geodata/metro-routes.pmtiles:/data/gtfs/metro-routes.pmtiles:ro
+      - ./geodata/ferry-routes.pmtiles:/data/gtfs/ferry-routes.pmtiles:ro
+      - ./geodata/light-rail-routes.pmtiles:/data/gtfs/light-rail-routes.pmtiles:ro
+      - ./geodata/bus-stops.pmtiles:/data/gtfs/bus-stops.pmtiles:ro
+      - ./martin/config.yaml:/config/martin.yaml:ro
+
+  # Application
 
   # api:
   #   build:
@@ -134,7 +154,7 @@ services:
   #   networks:
   #     - internal
 
-# ── Volumes & Networks ────────────────────────────────────────────────────────
+# Volumes & Networks
 
 volumes:
   postgres_data:
