@@ -1,0 +1,7537 @@
+{
+    "light-rail": [
+        {
+            "route_id": "26460_0",
+            "name": "L",
+            "agency": "Hovedstadens Letbane"
+        },
+        {
+            "route_id": "25479_0",
+            "name": "L",
+            "agency": "Odense Letbane"
+        },
+        {
+            "route_id": "24689_0",
+            "name": "L1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23613_0",
+            "name": "L2",
+            "agency": "Midttrafik"
+        }
+    ],
+    "bus": [
+        {
+            "route_id": "25679_3",
+            "name": "032",
+            "agency": "GoCollective"
+        },
+        {
+            "route_id": "23927_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23929_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24655_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23928_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23931_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23924_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25849_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23925_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23933_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23932_3",
+            "name": "1",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16801_3",
+            "name": "1",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25354_3",
+            "name": "1",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23150_3",
+            "name": "1",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22869_3",
+            "name": "1",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22868_3",
+            "name": "1",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23148_3",
+            "name": "1",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22458_3",
+            "name": "1",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25504_3",
+            "name": "1",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22460_3",
+            "name": "1",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22833_3",
+            "name": "1",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23936_715",
+            "name": "10",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24697_3",
+            "name": "10",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23938_3",
+            "name": "10",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25850_3",
+            "name": "10",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7234_3",
+            "name": "10",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25969_3",
+            "name": "10",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26439_3",
+            "name": "10",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22465_3",
+            "name": "10",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23939_3",
+            "name": "100",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22873_3",
+            "name": "100",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23940_3",
+            "name": "1002",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23941_3",
+            "name": "1003",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23941_715",
+            "name": "1003",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23942_3",
+            "name": "1004",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23942_715",
+            "name": "1004",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23943_3",
+            "name": "1005",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23944_3",
+            "name": "1006",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23945_3",
+            "name": "1007",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23945_715",
+            "name": "1007",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23946_3",
+            "name": "1008",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26014_3",
+            "name": "100A",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23948_3",
+            "name": "101",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26359_3",
+            "name": "101",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18943_3",
+            "name": "101A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26360_3",
+            "name": "101N",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23949_3",
+            "name": "102",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26361_3",
+            "name": "102",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22874_3",
+            "name": "102",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18944_3",
+            "name": "102A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23950_3",
+            "name": "103",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22875_3",
+            "name": "103",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22466_3",
+            "name": "103",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26362_3",
+            "name": "103S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23951_3",
+            "name": "104",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22876_3",
+            "name": "104",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23952_3",
+            "name": "105",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22467_3",
+            "name": "105",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23953_715",
+            "name": "106",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "9998_3",
+            "name": "106",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22468_3",
+            "name": "106",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23954_3",
+            "name": "107",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23954_715",
+            "name": "107",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22877_3",
+            "name": "107",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18946_3",
+            "name": "108",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "10001_3",
+            "name": "109",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22223_3",
+            "name": "10C",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23957_3",
+            "name": "11",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23961_3",
+            "name": "11",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25749_3",
+            "name": "11",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23960_3",
+            "name": "11",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24293_3",
+            "name": "11",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25851_3",
+            "name": "11",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22879_3",
+            "name": "11",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23151_3",
+            "name": "11",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25184_3",
+            "name": "11",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23323_3",
+            "name": "11",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22469_3",
+            "name": "11",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23962_3",
+            "name": "110",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23962_715",
+            "name": "110",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16578_3",
+            "name": "110",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22881_3",
+            "name": "110",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22470_3",
+            "name": "110",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25034_3",
+            "name": "110R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "16579_3",
+            "name": "111",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22882_3",
+            "name": "111",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22471_3",
+            "name": "111",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23964_3",
+            "name": "112",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23965_715",
+            "name": "112",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26363_3",
+            "name": "112",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22884_3",
+            "name": "112",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22472_3",
+            "name": "112",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23966_3",
+            "name": "113",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23966_715",
+            "name": "113",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22885_3",
+            "name": "113",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25194_3",
+            "name": "113",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23968_3",
+            "name": "114",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23969_3",
+            "name": "114",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24554_3",
+            "name": "114",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23971_3",
+            "name": "115",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23971_715",
+            "name": "115",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24555_3",
+            "name": "115",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22473_3",
+            "name": "115",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23972_3",
+            "name": "116",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "10250_3",
+            "name": "116",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22474_3",
+            "name": "116",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25279_3",
+            "name": "116U",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7238_3",
+            "name": "117",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25199_3",
+            "name": "117",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23975_3",
+            "name": "118",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22887_3",
+            "name": "118",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7239_3",
+            "name": "118",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7240_3",
+            "name": "119",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22475_3",
+            "name": "119",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24316_715",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23982_3",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23981_3",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24295_3",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25852_3",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23980_3",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23980_715",
+            "name": "12",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22889_3",
+            "name": "12",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23152_3",
+            "name": "12",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7241_3",
+            "name": "12",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23324_3",
+            "name": "12",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23983_3",
+            "name": "120",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "19609_3",
+            "name": "120",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23984_3",
+            "name": "121",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26364_3",
+            "name": "121",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24784_3",
+            "name": "121",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23985_3",
+            "name": "122",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16802_3",
+            "name": "122",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18673_3",
+            "name": "122S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23986_3",
+            "name": "123",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7244_3",
+            "name": "123",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22477_3",
+            "name": "123",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25212_3",
+            "name": "124",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22478_3",
+            "name": "124",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7246_3",
+            "name": "127",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26292_3",
+            "name": "128",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22480_3",
+            "name": "128",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25195_3",
+            "name": "129",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24919_3",
+            "name": "13",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23990_3",
+            "name": "13",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23988_3",
+            "name": "13",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25853_3",
+            "name": "13",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23989_3",
+            "name": "13",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22891_3",
+            "name": "13",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23153_3",
+            "name": "13",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26309_3",
+            "name": "13",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "16583_3",
+            "name": "130",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26542_3",
+            "name": "130",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "16584_3",
+            "name": "131",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26543_3",
+            "name": "131",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26589_3",
+            "name": "131N",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26365_3",
+            "name": "131S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "16585_3",
+            "name": "132",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7252_3",
+            "name": "132",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7253_3",
+            "name": "133",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26366_3",
+            "name": "133S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22482_3",
+            "name": "134",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26367_3",
+            "name": "134S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26544_3",
+            "name": "135",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22483_3",
+            "name": "135",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22484_3",
+            "name": "136",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7256_3",
+            "name": "137",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22485_3",
+            "name": "138",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18949_3",
+            "name": "139",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25624_3",
+            "name": "13S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24920_3",
+            "name": "14",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23993_3",
+            "name": "14",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25854_3",
+            "name": "14",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23992_3",
+            "name": "14",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22893_3",
+            "name": "14",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7257_3",
+            "name": "14",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23325_3",
+            "name": "14",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26104_3",
+            "name": "14",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23994_3",
+            "name": "140",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22487_3",
+            "name": "140",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25750_715",
+            "name": "141",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7258_3",
+            "name": "141",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7259_3",
+            "name": "142",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26729_3",
+            "name": "142",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7260_3",
+            "name": "143",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22489_3",
+            "name": "143",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23513_3",
+            "name": "144",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22490_3",
+            "name": "144",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7263_3",
+            "name": "147",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22491_3",
+            "name": "147",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23375_3",
+            "name": "148",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7264_3",
+            "name": "149",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23995_3",
+            "name": "15",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23997_3",
+            "name": "15",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25855_3",
+            "name": "15",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23996_3",
+            "name": "15",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22894_3",
+            "name": "15",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23998_3",
+            "name": "150",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7266_700",
+            "name": "150S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7267_3",
+            "name": "151",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7268_3",
+            "name": "152",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25939_3",
+            "name": "153",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7272_3",
+            "name": "156",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7273_3",
+            "name": "157",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25230_3",
+            "name": "158",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7274_3",
+            "name": "158",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22323_3",
+            "name": "15E",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24002_3",
+            "name": "16",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24001_715",
+            "name": "16",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24001_3",
+            "name": "16",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22895_3",
+            "name": "16",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25751_3",
+            "name": "160",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "17211_3",
+            "name": "160",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "16596_3",
+            "name": "161",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "16597_3",
+            "name": "162",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26368_3",
+            "name": "162S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23443_3",
+            "name": "163",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24584_3",
+            "name": "164",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7278_3",
+            "name": "165",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7279_3",
+            "name": "166",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22494_3",
+            "name": "166",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25752_3",
+            "name": "168",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18195_3",
+            "name": "168",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25753_3",
+            "name": "169",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24004_3",
+            "name": "17",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24003_3",
+            "name": "17",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22896_3",
+            "name": "17",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26089_3",
+            "name": "17",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24005_3",
+            "name": "171",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24585_3",
+            "name": "171",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24006_3",
+            "name": "172",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24586_3",
+            "name": "172",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22897_3",
+            "name": "176",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7287_3",
+            "name": "176",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22495_3",
+            "name": "177",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7288_3",
+            "name": "179",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22496_3",
+            "name": "179",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24007_3",
+            "name": "18",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24921_3",
+            "name": "18",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24921_715",
+            "name": "18",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22898_3",
+            "name": "18",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24587_3",
+            "name": "18",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26724_3",
+            "name": "180",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24008_3",
+            "name": "182",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7291_3",
+            "name": "182",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7292_3",
+            "name": "183",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7293_3",
+            "name": "184",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7294_3",
+            "name": "185",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22500_3",
+            "name": "188",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24009_3",
+            "name": "189",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23563_3",
+            "name": "18A",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23564_3",
+            "name": "18B",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26251_3",
+            "name": "18C",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25389_3",
+            "name": "18E",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26499_3",
+            "name": "19",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26109_3",
+            "name": "19",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24011_3",
+            "name": "190",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24012_715",
+            "name": "191",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7298_3",
+            "name": "191",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7299_3",
+            "name": "192",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7300_3",
+            "name": "193",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7301_3",
+            "name": "194",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21403_3",
+            "name": "195",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24854_3",
+            "name": "195E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21524_3",
+            "name": "195S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "9503_3",
+            "name": "196",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26369_3",
+            "name": "196S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17111_3",
+            "name": "197",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18951_3",
+            "name": "198",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22502_3",
+            "name": "198",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24014_3",
+            "name": "1A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24922_3",
+            "name": "1A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7303_3",
+            "name": "1A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26605_3",
+            "name": "1A",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23383_3",
+            "name": "1A",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24022_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24023_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24659_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25599_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24025_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24019_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25856_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24020_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24027_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24026_3",
+            "name": "2",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16606_3",
+            "name": "2",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25356_3",
+            "name": "2",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23156_3",
+            "name": "2",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22902_3",
+            "name": "2",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22901_3",
+            "name": "2",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23154_3",
+            "name": "2",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22504_3",
+            "name": "2",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25505_3",
+            "name": "2",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22506_3",
+            "name": "2",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22508_3",
+            "name": "2",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24028_3",
+            "name": "200",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22906_3",
+            "name": "200",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26016_3",
+            "name": "200N",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7304_700",
+            "name": "200S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "16609_3",
+            "name": "201",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19613_3",
+            "name": "201A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24730_3",
+            "name": "201E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24030_3",
+            "name": "202",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24030_715",
+            "name": "202",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26017_3",
+            "name": "202",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22907_3",
+            "name": "202",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19614_3",
+            "name": "202A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26018_3",
+            "name": "202E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "10254_3",
+            "name": "203",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22509_3",
+            "name": "204",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24031_3",
+            "name": "205",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "10256_3",
+            "name": "205",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26094_3",
+            "name": "205U",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "10257_3",
+            "name": "206",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "10258_3",
+            "name": "207",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22510_3",
+            "name": "207",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22909_3",
+            "name": "208",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22511_3",
+            "name": "208",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22910_3",
+            "name": "209",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26293_3",
+            "name": "209",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24034_3",
+            "name": "21",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24033_3",
+            "name": "21",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7307_3",
+            "name": "21",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "16617_3",
+            "name": "210",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22512_3",
+            "name": "210",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24731_3",
+            "name": "210E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26149_3",
+            "name": "210R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24036_3",
+            "name": "211",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16618_3",
+            "name": "211",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22513_3",
+            "name": "211",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24732_3",
+            "name": "211E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24980_3",
+            "name": "211U",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24037_3",
+            "name": "212",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22912_3",
+            "name": "212",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7309_3",
+            "name": "212",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22514_3",
+            "name": "212",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24981_3",
+            "name": "212U",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24038_3",
+            "name": "213",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22913_3",
+            "name": "213",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24982_3",
+            "name": "213U",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24040_3",
+            "name": "214",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22515_3",
+            "name": "214",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24041_3",
+            "name": "215",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24041_715",
+            "name": "215",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20598_3",
+            "name": "215",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7311_3",
+            "name": "215",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7312_3",
+            "name": "216",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22516_3",
+            "name": "216",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24042_3",
+            "name": "217",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7313_3",
+            "name": "217",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22517_3",
+            "name": "217",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7315_3",
+            "name": "219",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25489_3",
+            "name": "21N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7316_3",
+            "name": "22",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26424_3",
+            "name": "22",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24045_3",
+            "name": "220",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24045_715",
+            "name": "220",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20600_3",
+            "name": "220",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19617_3",
+            "name": "220",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22817_3",
+            "name": "220E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24046_715",
+            "name": "221",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24046_3",
+            "name": "221",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20601_3",
+            "name": "221",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7318_3",
+            "name": "221",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22818_3",
+            "name": "221E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20602_3",
+            "name": "222",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22819_3",
+            "name": "222E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24047_3",
+            "name": "223",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24047_715",
+            "name": "223",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20603_3",
+            "name": "223",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22268_3",
+            "name": "223",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22520_3",
+            "name": "223",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22820_3",
+            "name": "223E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19618_3",
+            "name": "224",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22521_3",
+            "name": "224",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "20604_3",
+            "name": "225",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7321_3",
+            "name": "225",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22522_3",
+            "name": "225",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22821_3",
+            "name": "225E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20605_3",
+            "name": "226",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22269_3",
+            "name": "226",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22523_3",
+            "name": "226",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22822_3",
+            "name": "226E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7323_3",
+            "name": "227",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22524_3",
+            "name": "227",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "10352_3",
+            "name": "228",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22525_3",
+            "name": "229",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25490_3",
+            "name": "22N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24588_3",
+            "name": "23",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24052_3",
+            "name": "230",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20606_3",
+            "name": "230",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19047_3",
+            "name": "230R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24054_3",
+            "name": "231",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22270_3",
+            "name": "231",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24923_715",
+            "name": "232",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21098_3",
+            "name": "233",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26594_715",
+            "name": "234",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22918_3",
+            "name": "234",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24056_3",
+            "name": "235",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24924_715",
+            "name": "236",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "19029_3",
+            "name": "236",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22526_3",
+            "name": "236",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24058_3",
+            "name": "237",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24060_3",
+            "name": "238",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22527_3",
+            "name": "239",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25491_3",
+            "name": "23N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25429_715",
+            "name": "24",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24062_3",
+            "name": "24",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20608_3",
+            "name": "240",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26619_3",
+            "name": "240E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26294_3",
+            "name": "240R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25824_3",
+            "name": "240S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20961_3",
+            "name": "241",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19495_3",
+            "name": "241",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25825_3",
+            "name": "241S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19496_3",
+            "name": "242",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19497_3",
+            "name": "243",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19498_3",
+            "name": "244",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25972_3",
+            "name": "245",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23853_3",
+            "name": "245R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7333_3",
+            "name": "246",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25492_3",
+            "name": "24N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25450_3",
+            "name": "25",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21908_3",
+            "name": "25",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "20610_3",
+            "name": "250",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7336_700",
+            "name": "250S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22794_3",
+            "name": "251",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22795_3",
+            "name": "252",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23099_3",
+            "name": "252",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "10163_3",
+            "name": "253",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22530_3",
+            "name": "253",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22796_3",
+            "name": "254",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22531_3",
+            "name": "254",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25089_3",
+            "name": "2541",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25090_3",
+            "name": "2542",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26440_3",
+            "name": "255",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22532_3",
+            "name": "256",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25091_3",
+            "name": "2571",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25092_3",
+            "name": "2572",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25093_3",
+            "name": "2573",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25094_3",
+            "name": "2581",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25095_3",
+            "name": "2583",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25451_3",
+            "name": "25E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25493_3",
+            "name": "25N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24065_3",
+            "name": "26",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25452_3",
+            "name": "26",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7343_3",
+            "name": "26",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18696_3",
+            "name": "260",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22078_3",
+            "name": "260E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18955_3",
+            "name": "260R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "20611_3",
+            "name": "261",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18956_3",
+            "name": "261",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22079_3",
+            "name": "261E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20612_3",
+            "name": "262",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26454_3",
+            "name": "262",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25744_3",
+            "name": "262",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22080_3",
+            "name": "262E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20613_3",
+            "name": "263",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18957_3",
+            "name": "263",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25097_3",
+            "name": "2631",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25099_3",
+            "name": "2633",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22081_3",
+            "name": "263E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20614_3",
+            "name": "264",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20411_3",
+            "name": "264",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22082_3",
+            "name": "264E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18697_3",
+            "name": "265",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22922_3",
+            "name": "265",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18958_3",
+            "name": "265",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22537_3",
+            "name": "265",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22083_3",
+            "name": "265E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18698_3",
+            "name": "266",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18959_3",
+            "name": "266",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22538_3",
+            "name": "266",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22084_3",
+            "name": "266E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18699_3",
+            "name": "267",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26214_3",
+            "name": "267",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22539_3",
+            "name": "267",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22085_3",
+            "name": "267E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25244_3",
+            "name": "268",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22540_3",
+            "name": "268",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26389_3",
+            "name": "269",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22541_3",
+            "name": "269",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26390_3",
+            "name": "269E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25494_3",
+            "name": "26N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "21888_3",
+            "name": "27",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24067_3",
+            "name": "270",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18702_3",
+            "name": "270",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22924_3",
+            "name": "270",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18703_3",
+            "name": "271",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23108_3",
+            "name": "271",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22797_3",
+            "name": "271",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18704_3",
+            "name": "272",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22798_3",
+            "name": "272",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18705_3",
+            "name": "273",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22925_3",
+            "name": "273",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22799_3",
+            "name": "273",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "20615_3",
+            "name": "274",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22926_3",
+            "name": "274",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22800_3",
+            "name": "274",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25789_3",
+            "name": "275",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22801_3",
+            "name": "275",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26694_715",
+            "name": "275F",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22927_3",
+            "name": "276",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22928_3",
+            "name": "278",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22542_3",
+            "name": "278",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25495_3",
+            "name": "27N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24068_3",
+            "name": "28",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22543_3",
+            "name": "280",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23723_3",
+            "name": "281",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22834_3",
+            "name": "282",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24069_3",
+            "name": "283",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22544_3",
+            "name": "283",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22546_3",
+            "name": "285",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "21136_3",
+            "name": "287",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24070_3",
+            "name": "29",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24317_715",
+            "name": "290",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25984_3",
+            "name": "296",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25985_3",
+            "name": "297",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25986_3",
+            "name": "298",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24073_3",
+            "name": "2A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24926_3",
+            "name": "2A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7346_3",
+            "name": "2A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26606_3",
+            "name": "2A",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23385_3",
+            "name": "2A",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24075_3",
+            "name": "2B",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24081_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24080_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24084_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24078_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25857_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24079_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24086_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24083_3",
+            "name": "3",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26340_3",
+            "name": "3",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23157_3",
+            "name": "3",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22551_3",
+            "name": "3",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22554_3",
+            "name": "3",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22555_3",
+            "name": "3",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22553_3",
+            "name": "3",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26341_715",
+            "name": "30",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22038_3",
+            "name": "300E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26020_3",
+            "name": "300N",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7349_700",
+            "name": "300S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7350_3",
+            "name": "301",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26370_3",
+            "name": "301S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24090_3",
+            "name": "302",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24090_715",
+            "name": "302",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26021_3",
+            "name": "302",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7351_3",
+            "name": "302",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26022_3",
+            "name": "302E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7352_3",
+            "name": "303",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21582_3",
+            "name": "305",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22326_3",
+            "name": "305",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22039_3",
+            "name": "305E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24091_715",
+            "name": "306",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24091_3",
+            "name": "306",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21583_3",
+            "name": "306",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22040_3",
+            "name": "306E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18967_3",
+            "name": "307",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26725_3",
+            "name": "307",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25889_3",
+            "name": "308",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24092_3",
+            "name": "309",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24094_3",
+            "name": "31",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24093_3",
+            "name": "31",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24093_715",
+            "name": "31",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26342_715",
+            "name": "31",
+            "agency": "NT"
+        },
+        {
+            "route_id": "21718_3",
+            "name": "31",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21584_3",
+            "name": "310",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22041_3",
+            "name": "310E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19693_3",
+            "name": "310R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24095_3",
+            "name": "311",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24095_715",
+            "name": "311",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22042_3",
+            "name": "311",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22934_3",
+            "name": "311",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18968_3",
+            "name": "311",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22043_3",
+            "name": "311E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24983_3",
+            "name": "312",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22935_3",
+            "name": "312",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10355_3",
+            "name": "312",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24096_3",
+            "name": "313",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24096_715",
+            "name": "313",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22936_3",
+            "name": "313",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10356_3",
+            "name": "313",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24097_3",
+            "name": "314",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26343_715",
+            "name": "314",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10264_3",
+            "name": "314",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21585_3",
+            "name": "315",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22938_715",
+            "name": "315",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10265_3",
+            "name": "315",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22044_3",
+            "name": "315E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21586_3",
+            "name": "316",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22939_715",
+            "name": "316",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10266_3",
+            "name": "316",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22045_3",
+            "name": "316E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22940_715",
+            "name": "317",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7360_3",
+            "name": "317",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25754_715",
+            "name": "318",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7361_3",
+            "name": "318",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24098_3",
+            "name": "319",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24099_3",
+            "name": "32",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24099_715",
+            "name": "32",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24100_3",
+            "name": "32",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26344_715",
+            "name": "32",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25029_3",
+            "name": "32",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21587_3",
+            "name": "320",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22943_3",
+            "name": "320",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22558_3",
+            "name": "320",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22046_3",
+            "name": "320E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21018_3",
+            "name": "320R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21588_3",
+            "name": "321",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22944_3",
+            "name": "321",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22853_3",
+            "name": "321",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22559_3",
+            "name": "321",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24789_3",
+            "name": "321E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21589_3",
+            "name": "322",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22946_3",
+            "name": "322",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22271_3",
+            "name": "322",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22047_3",
+            "name": "322E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21590_3",
+            "name": "323",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22272_3",
+            "name": "323",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22048_3",
+            "name": "323E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21591_3",
+            "name": "324",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22049_3",
+            "name": "324E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21592_3",
+            "name": "325",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22273_3",
+            "name": "325",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22050_3",
+            "name": "325E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22949_715",
+            "name": "326",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7369_3",
+            "name": "326",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26345_715",
+            "name": "327",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7370_3",
+            "name": "327",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22951_715",
+            "name": "328",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22952_715",
+            "name": "329",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24101_3",
+            "name": "33",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26346_715",
+            "name": "33",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7371_3",
+            "name": "33",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24102_3",
+            "name": "330",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24102_715",
+            "name": "330",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21593_3",
+            "name": "330",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22953_715",
+            "name": "330",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22561_3",
+            "name": "330",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22051_3",
+            "name": "330E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25940_3",
+            "name": "330R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24103_3",
+            "name": "331",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21594_3",
+            "name": "331",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22954_715",
+            "name": "331",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22052_3",
+            "name": "331E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21595_3",
+            "name": "332",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22955_715",
+            "name": "332",
+            "agency": "NT"
+        },
+        {
+            "route_id": "20878_3",
+            "name": "332",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22053_3",
+            "name": "332E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21596_3",
+            "name": "333",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7373_3",
+            "name": "333",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22562_3",
+            "name": "333",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26347_715",
+            "name": "334",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7374_3",
+            "name": "334",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22563_3",
+            "name": "334",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24104_3",
+            "name": "335",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21597_3",
+            "name": "335",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7375_3",
+            "name": "335",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22564_3",
+            "name": "335",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22054_3",
+            "name": "335E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21598_3",
+            "name": "336",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20974_3",
+            "name": "336",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22565_3",
+            "name": "336",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22055_3",
+            "name": "336E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21599_3",
+            "name": "337",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18188_3",
+            "name": "337",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22056_3",
+            "name": "337E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22566_3",
+            "name": "338",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24105_3",
+            "name": "34",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26469_715",
+            "name": "34",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22233_3",
+            "name": "34",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21600_3",
+            "name": "340",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22959_715",
+            "name": "340",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7380_3",
+            "name": "340",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22568_3",
+            "name": "340",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22057_3",
+            "name": "340E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21693_3",
+            "name": "341",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26710_3",
+            "name": "341",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22569_3",
+            "name": "341",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22058_3",
+            "name": "341E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24106_3",
+            "name": "342",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22961_715",
+            "name": "342",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22570_3",
+            "name": "342",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22962_715",
+            "name": "343",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22571_3",
+            "name": "343",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22572_3",
+            "name": "344",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7383_3",
+            "name": "345",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22573_3",
+            "name": "345",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22059_3",
+            "name": "345E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24107_3",
+            "name": "346",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21602_3",
+            "name": "346",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22574_3",
+            "name": "346",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22060_3",
+            "name": "346E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21603_3",
+            "name": "347",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7385_3",
+            "name": "347",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22061_3",
+            "name": "347E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21604_3",
+            "name": "348",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22576_3",
+            "name": "348",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22062_3",
+            "name": "348E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24108_3",
+            "name": "349",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "21605_3",
+            "name": "349",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22577_3",
+            "name": "349",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22063_3",
+            "name": "349E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24110_3",
+            "name": "35",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25453_3",
+            "name": "35",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26470_715",
+            "name": "35",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22578_3",
+            "name": "350",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7387_700",
+            "name": "350S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24111_3",
+            "name": "351",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22579_3",
+            "name": "351",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24112_3",
+            "name": "352",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22580_3",
+            "name": "352",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7388_3",
+            "name": "353",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7389_3",
+            "name": "354",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7392_3",
+            "name": "358",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25454_3",
+            "name": "35E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25496_3",
+            "name": "36",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22964_3",
+            "name": "360",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19049_3",
+            "name": "360R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18710_3",
+            "name": "361",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22965_3",
+            "name": "361",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7395_3",
+            "name": "361",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "20618_3",
+            "name": "362",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22966_3",
+            "name": "362",
+            "agency": "NT"
+        },
+        {
+            "route_id": "9585_3",
+            "name": "362",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18712_3",
+            "name": "363",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22967_3",
+            "name": "363",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7396_3",
+            "name": "363",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23233_3",
+            "name": "365R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26471_715",
+            "name": "37",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22234_3",
+            "name": "37",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22968_3",
+            "name": "370",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25186_3",
+            "name": "370R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18713_3",
+            "name": "371",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22969_3",
+            "name": "371",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23253_3",
+            "name": "371",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18714_3",
+            "name": "372",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22970_3",
+            "name": "372",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18715_3",
+            "name": "373",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22971_3",
+            "name": "373",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23254_3",
+            "name": "373",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18716_3",
+            "name": "374",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19621_3",
+            "name": "374",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21769_3",
+            "name": "375R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22584_3",
+            "name": "377",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25497_3",
+            "name": "38",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22973_3",
+            "name": "380",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22585_3",
+            "name": "380",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18973_3",
+            "name": "380R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22974_3",
+            "name": "381",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22975_3",
+            "name": "382",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23428_3",
+            "name": "382",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22976_3",
+            "name": "383",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22587_3",
+            "name": "383",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7407_3",
+            "name": "385",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26009_3",
+            "name": "386",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7410_3",
+            "name": "388",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26472_715",
+            "name": "39",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18974_3",
+            "name": "390R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24114_3",
+            "name": "3A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25973_3",
+            "name": "3A",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24117_3",
+            "name": "4",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24676_3",
+            "name": "4",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24676_715",
+            "name": "4",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24119_3",
+            "name": "4",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25858_3",
+            "name": "4",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24118_3",
+            "name": "4",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23159_3",
+            "name": "4",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22594_3",
+            "name": "4",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22589_3",
+            "name": "4",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22835_3",
+            "name": "4",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22591_3",
+            "name": "4",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22595_3",
+            "name": "4",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24122_3",
+            "name": "40",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24121_3",
+            "name": "40",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25369_715",
+            "name": "40",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24123_3",
+            "name": "400",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26023_3",
+            "name": "400A",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26024_3",
+            "name": "400N",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7413_700",
+            "name": "400S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24124_3",
+            "name": "401",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16628_3",
+            "name": "401",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23377_3",
+            "name": "401",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "17278_3",
+            "name": "401A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24125_715",
+            "name": "402",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24125_3",
+            "name": "402",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "19520_3",
+            "name": "402",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "10363_3",
+            "name": "402",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25215_3",
+            "name": "402B",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25215_715",
+            "name": "402B",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26249_3",
+            "name": "402S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24126_3",
+            "name": "403",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24126_715",
+            "name": "403",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22597_3",
+            "name": "403",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26371_3",
+            "name": "403S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24127_715",
+            "name": "404",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24127_3",
+            "name": "404",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26689_3",
+            "name": "404",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22982_3",
+            "name": "404",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10365_3",
+            "name": "404",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26250_3",
+            "name": "404S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18727_3",
+            "name": "405",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22328_3",
+            "name": "405",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19622_3",
+            "name": "406",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22983_3",
+            "name": "407",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19583_3",
+            "name": "408",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22984_3",
+            "name": "409",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22334_3",
+            "name": "40E",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25625_3",
+            "name": "40S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24131_3",
+            "name": "41",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24130_3",
+            "name": "41",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26348_715",
+            "name": "41",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24677_3",
+            "name": "410",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24677_715",
+            "name": "410",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24132_715",
+            "name": "411",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24132_3",
+            "name": "411",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "13025_3",
+            "name": "411",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22603_3",
+            "name": "411",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25626_3",
+            "name": "411S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24133_715",
+            "name": "412",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24133_3",
+            "name": "412",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22985_3",
+            "name": "414",
+            "agency": "NT"
+        },
+        {
+            "route_id": "10369_3",
+            "name": "415",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22604_3",
+            "name": "415",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22605_3",
+            "name": "416",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22986_3",
+            "name": "417",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22606_3",
+            "name": "417",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22607_3",
+            "name": "418",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22988_3",
+            "name": "419",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24135_3",
+            "name": "42",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25499_3",
+            "name": "42",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24136_3",
+            "name": "420",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23282_3",
+            "name": "420",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25627_3",
+            "name": "420S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "19624_3",
+            "name": "421",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22989_3",
+            "name": "422",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22608_3",
+            "name": "422",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26310_3",
+            "name": "423",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "19625_3",
+            "name": "425",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22609_3",
+            "name": "425",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22610_3",
+            "name": "426",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22611_3",
+            "name": "427",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22612_3",
+            "name": "428",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24140_3",
+            "name": "43",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26349_715",
+            "name": "43",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22614_3",
+            "name": "43",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18729_3",
+            "name": "430",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22086_3",
+            "name": "430E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17280_3",
+            "name": "430R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19563_3",
+            "name": "431",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18731_3",
+            "name": "432",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "13033_3",
+            "name": "432",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22087_3",
+            "name": "432E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18732_3",
+            "name": "433",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22088_3",
+            "name": "433E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19628_3",
+            "name": "437",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23109_3",
+            "name": "439",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24141_3",
+            "name": "44",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25829_715",
+            "name": "44",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23110_3",
+            "name": "440",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18978_3",
+            "name": "440R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24142_3",
+            "name": "441",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24142_715",
+            "name": "441",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23111_3",
+            "name": "442",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24143_3",
+            "name": "443",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24143_715",
+            "name": "443",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25628_3",
+            "name": "443S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24144_3",
+            "name": "444",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22617_3",
+            "name": "447",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24393_715",
+            "name": "448",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22619_3",
+            "name": "449",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24146_3",
+            "name": "45",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25455_3",
+            "name": "45",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25500_3",
+            "name": "45",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24286_3",
+            "name": "454",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24744_3",
+            "name": "456",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23112_3",
+            "name": "457",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23884_3",
+            "name": "457",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25456_3",
+            "name": "45E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24149_3",
+            "name": "46",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26351_3",
+            "name": "46",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23113_3",
+            "name": "460",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22620_3",
+            "name": "460",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24994_3",
+            "name": "460R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23114_3",
+            "name": "461",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23115_3",
+            "name": "462",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19631_3",
+            "name": "462",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23116_3",
+            "name": "463",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23117_3",
+            "name": "464",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22319_3",
+            "name": "465",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19632_3",
+            "name": "466",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19633_3",
+            "name": "467",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23118_3",
+            "name": "468",
+            "agency": "NT"
+        },
+        {
+            "route_id": "20509_3",
+            "name": "468",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19634_3",
+            "name": "469",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25458_3",
+            "name": "46E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26473_715",
+            "name": "47",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18740_3",
+            "name": "470",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22089_3",
+            "name": "470E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17281_3",
+            "name": "470R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18741_3",
+            "name": "471",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22621_3",
+            "name": "471",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22090_3",
+            "name": "471E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18742_3",
+            "name": "472",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22622_3",
+            "name": "472",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22091_3",
+            "name": "472E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22623_3",
+            "name": "473",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22624_3",
+            "name": "474",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25289_3",
+            "name": "475",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25794_715",
+            "name": "476",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26474_715",
+            "name": "48",
+            "agency": "NT"
+        },
+        {
+            "route_id": "17282_3",
+            "name": "480R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18743_3",
+            "name": "481",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18744_3",
+            "name": "482",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18745_3",
+            "name": "483",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18746_3",
+            "name": "484",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18747_3",
+            "name": "485",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22625_3",
+            "name": "485",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18750_3",
+            "name": "489",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26352_715",
+            "name": "49",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18751_3",
+            "name": "490",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19639_3",
+            "name": "490",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18752_3",
+            "name": "491",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25745_3",
+            "name": "492",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25746_3",
+            "name": "493",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "19642_3",
+            "name": "494",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25747_3",
+            "name": "494",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "19643_3",
+            "name": "495",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24151_3",
+            "name": "4A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "8765_3",
+            "name": "4A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26095_3",
+            "name": "4U",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24157_3",
+            "name": "5",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24155_3",
+            "name": "5",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24159_3",
+            "name": "5",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25859_3",
+            "name": "5",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22994_3",
+            "name": "5",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22631_3",
+            "name": "5",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22627_3",
+            "name": "5",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22836_3",
+            "name": "5",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22629_3",
+            "name": "5",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22632_3",
+            "name": "5",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22996_3",
+            "name": "50",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7418_700",
+            "name": "500S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19647_3",
+            "name": "501A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24162_3",
+            "name": "502",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24162_715",
+            "name": "502",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7420_3",
+            "name": "502",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24163_3",
+            "name": "504",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "20670_3",
+            "name": "504",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23208_3",
+            "name": "505",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19395_3",
+            "name": "506",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24309_3",
+            "name": "509",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22633_3",
+            "name": "510",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "19649_3",
+            "name": "511",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24944_3",
+            "name": "511",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "19565_3",
+            "name": "512",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24165_3",
+            "name": "513",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24166_3",
+            "name": "515",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25506_3",
+            "name": "517",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22998_3",
+            "name": "52",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22999_715",
+            "name": "520",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19566_3",
+            "name": "520",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23000_715",
+            "name": "521",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23001_715",
+            "name": "522",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24168_3",
+            "name": "523",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23002_715",
+            "name": "523",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22636_3",
+            "name": "524",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22637_3",
+            "name": "525",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23003_3",
+            "name": "52N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24169_3",
+            "name": "53",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23004_3",
+            "name": "53",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23005_715",
+            "name": "530",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19396_3",
+            "name": "530",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23006_715",
+            "name": "531",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22639_3",
+            "name": "532",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22640_3",
+            "name": "533",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22641_3",
+            "name": "534",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25748_3",
+            "name": "536",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22642_3",
+            "name": "537",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22643_3",
+            "name": "538",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23007_3",
+            "name": "53N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23008_3",
+            "name": "54",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23009_715",
+            "name": "540",
+            "agency": "NT"
+        },
+        {
+            "route_id": "17283_3",
+            "name": "540",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18757_3",
+            "name": "541",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23010_715",
+            "name": "541",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19567_3",
+            "name": "541",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22645_3",
+            "name": "541",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18758_3",
+            "name": "542",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23011_715",
+            "name": "542",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19568_3",
+            "name": "542",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23012_3",
+            "name": "543",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19569_3",
+            "name": "543",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23013_715",
+            "name": "544",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19570_3",
+            "name": "544",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18980_3",
+            "name": "545",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24171_3",
+            "name": "55",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23015_3",
+            "name": "55",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18759_3",
+            "name": "551",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23016_715",
+            "name": "551",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19652_3",
+            "name": "551",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18760_3",
+            "name": "552",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23119_715",
+            "name": "552",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19653_3",
+            "name": "552",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18761_3",
+            "name": "553",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19654_3",
+            "name": "553",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18762_3",
+            "name": "554",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25941_3",
+            "name": "554",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18763_3",
+            "name": "555",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18764_3",
+            "name": "556",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "20619_3",
+            "name": "557",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22024_3",
+            "name": "558",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26290_3",
+            "name": "55A",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22353_3",
+            "name": "55E",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23017_3",
+            "name": "56",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24172_3",
+            "name": "560",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18765_3",
+            "name": "560",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17545_3",
+            "name": "560",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24173_3",
+            "name": "561",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18766_3",
+            "name": "561",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17284_3",
+            "name": "561",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22647_3",
+            "name": "561",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18767_3",
+            "name": "562",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17285_3",
+            "name": "562",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22648_3",
+            "name": "562",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18768_3",
+            "name": "563",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "17286_3",
+            "name": "563",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22649_3",
+            "name": "563",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18769_3",
+            "name": "564",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22650_3",
+            "name": "564",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "17287_3",
+            "name": "565",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22651_3",
+            "name": "565",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18771_3",
+            "name": "566",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "9045_3",
+            "name": "566",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22652_3",
+            "name": "566",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24174_3",
+            "name": "567",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24174_715",
+            "name": "567",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18772_3",
+            "name": "567",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22653_3",
+            "name": "567",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24175_3",
+            "name": "568",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "17289_3",
+            "name": "568",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24932_3",
+            "name": "569",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24932_715",
+            "name": "569",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26291_3",
+            "name": "56A",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23018_3",
+            "name": "57",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24176_3",
+            "name": "570",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "17546_3",
+            "name": "570",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "17290_3",
+            "name": "571",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "17291_3",
+            "name": "572",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23688_3",
+            "name": "572",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "17292_3",
+            "name": "573",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22654_3",
+            "name": "573",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22655_3",
+            "name": "574",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22656_3",
+            "name": "575",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "21278_3",
+            "name": "576",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22657_3",
+            "name": "576",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "21279_3",
+            "name": "577",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22658_3",
+            "name": "577",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23020_3",
+            "name": "58",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24177_3",
+            "name": "580",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26333_715",
+            "name": "581",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "19571_3",
+            "name": "583",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19400_3",
+            "name": "587",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19401_3",
+            "name": "588",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24181_3",
+            "name": "590",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18773_3",
+            "name": "591",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19662_3",
+            "name": "591",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22344_3",
+            "name": "591E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18774_3",
+            "name": "592",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19663_3",
+            "name": "592",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22345_3",
+            "name": "592E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19664_3",
+            "name": "593",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19665_3",
+            "name": "595",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24182_3",
+            "name": "596",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "19572_3",
+            "name": "596",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19573_3",
+            "name": "597",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19574_3",
+            "name": "598",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24183_3",
+            "name": "5A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23318_3",
+            "name": "5C",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24186_3",
+            "name": "6",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24185_3",
+            "name": "6",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24185_715",
+            "name": "6",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24188_3",
+            "name": "6",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25335_3",
+            "name": "6",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23023_3",
+            "name": "6",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22664_3",
+            "name": "6",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22662_3",
+            "name": "6",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22666_3",
+            "name": "6",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24189_3",
+            "name": "60",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24189_715",
+            "name": "60",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23024_3",
+            "name": "600",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7437_700",
+            "name": "600S",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25554_3",
+            "name": "601A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7439_3",
+            "name": "602",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7440_3",
+            "name": "603",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7441_3",
+            "name": "604",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23025_3",
+            "name": "605",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7442_3",
+            "name": "605",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23026_3",
+            "name": "607",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7444_3",
+            "name": "607",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23027_3",
+            "name": "608",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18984_3",
+            "name": "608",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23455_3",
+            "name": "609",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26134_3",
+            "name": "60E",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25562_3",
+            "name": "60X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25517_715",
+            "name": "61",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25517_3",
+            "name": "61",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23029_3",
+            "name": "610",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23030_3",
+            "name": "611",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18985_3",
+            "name": "611",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23031_3",
+            "name": "615",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18986_3",
+            "name": "615",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23032_3",
+            "name": "617",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23121_3",
+            "name": "618",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22667_3",
+            "name": "619",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24191_3",
+            "name": "62",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22668_3",
+            "name": "620",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18987_3",
+            "name": "620R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18778_3",
+            "name": "621",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23034_3",
+            "name": "621",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23035_3",
+            "name": "625",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22669_3",
+            "name": "626",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22670_3",
+            "name": "627",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18988_3",
+            "name": "630R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22673_3",
+            "name": "632",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22674_3",
+            "name": "633",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22675_3",
+            "name": "634",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22676_3",
+            "name": "635",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22677_3",
+            "name": "636",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24193_3",
+            "name": "64",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18989_3",
+            "name": "640",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23134_715",
+            "name": "641",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22678_3",
+            "name": "641",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23135_715",
+            "name": "642",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22679_3",
+            "name": "642",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23136_715",
+            "name": "643",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23137_715",
+            "name": "645",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22680_3",
+            "name": "645",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23138_715",
+            "name": "646",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25461_3",
+            "name": "65",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22681_3",
+            "name": "654",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22682_3",
+            "name": "655",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22683_3",
+            "name": "656",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22354_3",
+            "name": "65E",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18990_3",
+            "name": "660R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "21383_3",
+            "name": "661R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26704_3",
+            "name": "663",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18993_3",
+            "name": "664",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18995_3",
+            "name": "667",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26384_3",
+            "name": "668",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18997_3",
+            "name": "669",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23036_3",
+            "name": "67",
+            "agency": "NT"
+        },
+        {
+            "route_id": "16386_3",
+            "name": "670",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22687_3",
+            "name": "670",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22688_3",
+            "name": "671",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22689_3",
+            "name": "673",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22690_3",
+            "name": "674",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22691_3",
+            "name": "675",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22692_3",
+            "name": "676",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26705_3",
+            "name": "678",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22693_3",
+            "name": "678",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22694_3",
+            "name": "679",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23037_3",
+            "name": "68",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7448_3",
+            "name": "68",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18781_3",
+            "name": "680",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26295_3",
+            "name": "680R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "18782_3",
+            "name": "681",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "19521_3",
+            "name": "682",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23139_715",
+            "name": "682",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22695_3",
+            "name": "682",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23140_715",
+            "name": "683",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23141_715",
+            "name": "684",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23142_715",
+            "name": "685",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22696_3",
+            "name": "685",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "18783_3",
+            "name": "688",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23144_715",
+            "name": "689",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18784_3",
+            "name": "691",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22697_3",
+            "name": "691",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22092_3",
+            "name": "691E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18785_3",
+            "name": "692",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22093_3",
+            "name": "692E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18786_3",
+            "name": "693",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22698_3",
+            "name": "693",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22094_3",
+            "name": "693E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24196_3",
+            "name": "694",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24197_3",
+            "name": "696",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22699_3",
+            "name": "697",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22700_3",
+            "name": "698",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24199_3",
+            "name": "6A",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7450_3",
+            "name": "6A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25204_3",
+            "name": "6a",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25404_3",
+            "name": "6M",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24206_3",
+            "name": "7",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24208_3",
+            "name": "7",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24204_3",
+            "name": "7",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25860_3",
+            "name": "7",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23395_3",
+            "name": "7",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22702_3",
+            "name": "7",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23038_3",
+            "name": "70",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23039_3",
+            "name": "701",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23040_3",
+            "name": "702",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23041_3",
+            "name": "703",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24209_3",
+            "name": "704",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23042_3",
+            "name": "704",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24398_715",
+            "name": "705",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23043_3",
+            "name": "705",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23044_3",
+            "name": "706",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23045_3",
+            "name": "707",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23046_3",
+            "name": "708",
+            "agency": "NT"
+        },
+        {
+            "route_id": "18787_3",
+            "name": "709",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23047_3",
+            "name": "709",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22705_3",
+            "name": "709",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25844_3",
+            "name": "70E",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19849_3",
+            "name": "71",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22706_3",
+            "name": "710",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24210_3",
+            "name": "711",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18788_3",
+            "name": "711",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22707_3",
+            "name": "711",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24211_3",
+            "name": "712",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18789_3",
+            "name": "712",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18790_3",
+            "name": "713",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22708_3",
+            "name": "713",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25987_715",
+            "name": "714",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18791_3",
+            "name": "714",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18792_3",
+            "name": "715",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23568_3",
+            "name": "715E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24318_715",
+            "name": "716",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22709_3",
+            "name": "716",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24213_3",
+            "name": "72",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23051_3",
+            "name": "72",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19850_3",
+            "name": "72",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22710_3",
+            "name": "721",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24216_3",
+            "name": "722",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22711_3",
+            "name": "722",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26335_3",
+            "name": "723",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22712_3",
+            "name": "723",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22713_3",
+            "name": "725",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22714_3",
+            "name": "726",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23052_3",
+            "name": "72N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25629_3",
+            "name": "72S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24217_3",
+            "name": "73",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24217_715",
+            "name": "73",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23053_3",
+            "name": "73",
+            "agency": "NT"
+        },
+        {
+            "route_id": "22715_3",
+            "name": "733",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22716_3",
+            "name": "735",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22717_3",
+            "name": "736",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22718_3",
+            "name": "737",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22719_3",
+            "name": "738",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23054_3",
+            "name": "73N",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19852_3",
+            "name": "74",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24218_3",
+            "name": "740",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25630_3",
+            "name": "740S",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22720_3",
+            "name": "741",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22721_3",
+            "name": "742",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24706_715",
+            "name": "745",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24706_3",
+            "name": "745",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25463_3",
+            "name": "75",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24222_3",
+            "name": "750",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24223_3",
+            "name": "751",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18798_3",
+            "name": "751",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22095_3",
+            "name": "751E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25988_3",
+            "name": "752",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "18799_3",
+            "name": "752",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22723_3",
+            "name": "752",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22096_3",
+            "name": "752E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "18800_3",
+            "name": "753",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22097_3",
+            "name": "753E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22724_3",
+            "name": "754",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22725_3",
+            "name": "756",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25664_3",
+            "name": "75E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24319_715",
+            "name": "762",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22727_3",
+            "name": "763",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24225_3",
+            "name": "766",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22728_3",
+            "name": "766",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23057_3",
+            "name": "77",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7465_3",
+            "name": "77",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24228_3",
+            "name": "770",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24229_3",
+            "name": "771",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22730_3",
+            "name": "772",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24680_3",
+            "name": "774",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22731_3",
+            "name": "774",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24231_3",
+            "name": "775",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "22732_3",
+            "name": "775",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22733_3",
+            "name": "777",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22734_3",
+            "name": "779",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26674_715",
+            "name": "77F",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23058_3",
+            "name": "78",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7466_3",
+            "name": "78",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "22735_3",
+            "name": "782",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22736_3",
+            "name": "784",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22737_3",
+            "name": "786",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22739_3",
+            "name": "788",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22740_3",
+            "name": "789",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25233_3",
+            "name": "790",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23213_3",
+            "name": "791",
+            "agency": "Ærø Kommune"
+        },
+        {
+            "route_id": "24589_3",
+            "name": "7A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24235_715",
+            "name": "8",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24235_3",
+            "name": "8",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24681_3",
+            "name": "8",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24236_3",
+            "name": "8",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25336_3",
+            "name": "8",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25507_3",
+            "name": "8",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "24979_3",
+            "name": "8",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22743_3",
+            "name": "8",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23059_3",
+            "name": "80",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23060_715",
+            "name": "800",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26025_3",
+            "name": "800A",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26026_3",
+            "name": "800E",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26027_3",
+            "name": "800N",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24237_715",
+            "name": "801",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24237_3",
+            "name": "801",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23061_715",
+            "name": "801",
+            "agency": "NT"
+        },
+        {
+            "route_id": "19683_3",
+            "name": "801A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26380_3",
+            "name": "801S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24238_3",
+            "name": "802",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23062_715",
+            "name": "802",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7469_3",
+            "name": "802",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24239_3",
+            "name": "803",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23063_715",
+            "name": "803",
+            "agency": "NT"
+        },
+        {
+            "route_id": "7470_3",
+            "name": "803",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24240_3",
+            "name": "804",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23064_715",
+            "name": "804",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25619_3",
+            "name": "804",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24243_3",
+            "name": "81",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24243_715",
+            "name": "81",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26700_3",
+            "name": "81",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25236_3",
+            "name": "81",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23066_715",
+            "name": "810",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24999_3",
+            "name": "811",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23068_715",
+            "name": "812",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26429_715",
+            "name": "8121",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23069_3",
+            "name": "813",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26033_3",
+            "name": "814",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25799_3",
+            "name": "814",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25000_3",
+            "name": "814",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "26034_3",
+            "name": "815",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26142_715",
+            "name": "815",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26035_3",
+            "name": "816",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23462_715",
+            "name": "817",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26037_3",
+            "name": "818",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "25285_3",
+            "name": "82",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23071_715",
+            "name": "820",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26039_3",
+            "name": "821",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23072_715",
+            "name": "821",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26040_3",
+            "name": "822",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23073_715",
+            "name": "822",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25589_3",
+            "name": "823",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26041_3",
+            "name": "823",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26042_3",
+            "name": "824",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26043_3",
+            "name": "825",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21683_3",
+            "name": "825S",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "21607_3",
+            "name": "826",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26044_3",
+            "name": "827",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26045_3",
+            "name": "828",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23074_715",
+            "name": "830",
+            "agency": "NT"
+        },
+        {
+            "route_id": "24245_715",
+            "name": "8300",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24246_715",
+            "name": "8301",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26047_3",
+            "name": "831",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23075_715",
+            "name": "831",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26048_3",
+            "name": "833",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "16424_3",
+            "name": "834",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26559_3",
+            "name": "84",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26509_3",
+            "name": "840",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26049_3",
+            "name": "841",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7481_3",
+            "name": "847",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "9301_3",
+            "name": "848",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25464_3",
+            "name": "85",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26711_3",
+            "name": "850",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24249_3",
+            "name": "851",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26051_3",
+            "name": "851",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26189_3",
+            "name": "851",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26052_3",
+            "name": "852",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26190_3",
+            "name": "852",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24469_3",
+            "name": "853",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26566_3",
+            "name": "853",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26195_3",
+            "name": "854",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26191_3",
+            "name": "855",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26192_3",
+            "name": "856",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26193_3",
+            "name": "857",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25591_3",
+            "name": "860",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26053_3",
+            "name": "860",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26054_3",
+            "name": "861",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26057_3",
+            "name": "866",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "23080_3",
+            "name": "87",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26297_3",
+            "name": "87",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25001_3",
+            "name": "873",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25002_3",
+            "name": "875",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "25003_3",
+            "name": "876",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "16653_3",
+            "name": "885",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26090_3",
+            "name": "8A",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24257_3",
+            "name": "9",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24682_3",
+            "name": "9",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24682_715",
+            "name": "9",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24258_3",
+            "name": "9",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "25861_3",
+            "name": "9",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "26728_3",
+            "name": "9",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "22774_3",
+            "name": "9",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23081_3",
+            "name": "90",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26058_3",
+            "name": "900A",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "22775_3",
+            "name": "900X",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "7490_3",
+            "name": "901",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7491_3",
+            "name": "902",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "10033_3",
+            "name": "903",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24954_3",
+            "name": "907",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26298_3",
+            "name": "908",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26375_3",
+            "name": "909",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26299_3",
+            "name": "911",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "24259_3",
+            "name": "912X",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "16662_3",
+            "name": "913",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "7493_3",
+            "name": "91N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "16665_3",
+            "name": "920",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "26229_3",
+            "name": "920R",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25689_3",
+            "name": "921",
+            "agency": "FYNBUS"
+        },
+        {
+            "route_id": "24262_3",
+            "name": "925X",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "7495_3",
+            "name": "93N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23083_3",
+            "name": "940X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23378_3",
+            "name": "944X",
+            "agency": "Sydtrafik"
+        },
+        {
+            "route_id": "23084_3",
+            "name": "950X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26099_3",
+            "name": "951X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23085_3",
+            "name": "951X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23086_3",
+            "name": "954X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26353_3",
+            "name": "958X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25809_3",
+            "name": "961",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25814_3",
+            "name": "962",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "25815_3",
+            "name": "963",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26712_3",
+            "name": "970N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23087_3",
+            "name": "970X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26713_3",
+            "name": "971N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23088_3",
+            "name": "971X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26714_3",
+            "name": "972N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23089_3",
+            "name": "973X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23090_3",
+            "name": "974X",
+            "agency": "NT"
+        },
+        {
+            "route_id": "26624_3",
+            "name": "981",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26625_3",
+            "name": "982",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26626_3",
+            "name": "983",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26627_3",
+            "name": "984",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26628_3",
+            "name": "985",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26629_3",
+            "name": "986",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26630_3",
+            "name": "987",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26631_3",
+            "name": "988",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "7500_3",
+            "name": "98N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "10164_3",
+            "name": "99N",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "23888_3",
+            "name": "BLÅ",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "24809_3",
+            "name": "BUS75",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23838_3",
+            "name": "GRØN",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "23921_3",
+            "name": "GUL",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "25174_715",
+            "name": "L1F",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "23919_3",
+            "name": "LILLA",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "25124_3",
+            "name": "M1",
+            "agency": "Metroselskabet"
+        },
+        {
+            "route_id": "25125_3",
+            "name": "M2",
+            "agency": "Metroselskabet"
+        },
+        {
+            "route_id": "25119_3",
+            "name": "M4",
+            "agency": "Metroselskabet"
+        },
+        {
+            "route_id": "24559_3",
+            "name": "ORANGE",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "23918_3",
+            "name": "PINK",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "23839_3",
+            "name": "RØD",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "22369_3",
+            "name": "Rød",
+            "agency": "DSB S-tog"
+        }
+    ],
+    "train": [
+        {
+            "route_id": "19753_2",
+            "name": "030",
+            "agency": "GoCollective"
+        },
+        {
+            "route_id": "21348_2",
+            "name": "030",
+            "agency": "GoCollective"
+        },
+        {
+            "route_id": "19754_2",
+            "name": "031",
+            "agency": "GoCollective"
+        },
+        {
+            "route_id": "24599_2",
+            "name": "110R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24600_2",
+            "name": "210R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24601_2",
+            "name": "410",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24602_2",
+            "name": "510R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "23258_2",
+            "name": "75",
+            "agency": "NT"
+        },
+        {
+            "route_id": "23259_2",
+            "name": "76",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25657_2",
+            "name": "802",
+            "agency": "Skånetrafiken"
+        },
+        {
+            "route_id": "25658_2",
+            "name": "803",
+            "agency": "Skånetrafiken"
+        },
+        {
+            "route_id": "25659_2",
+            "name": "804",
+            "agency": "Skånetrafiken"
+        },
+        {
+            "route_id": "24488_2",
+            "name": "910",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "25579_2",
+            "name": "92",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24829_2",
+            "name": "920E",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24489_2",
+            "name": "920R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "25989_2",
+            "name": "93",
+            "agency": "Midttrafik"
+        },
+        {
+            "route_id": "24490_2",
+            "name": "930R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24491_2",
+            "name": "940R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24492_2",
+            "name": "950R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "24493_2",
+            "name": "960R",
+            "agency": "Lokaltog A/S"
+        },
+        {
+            "route_id": "16448_109",
+            "name": "A",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "16449_109",
+            "name": "B",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "24609_109",
+            "name": "Bx",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "16451_109",
+            "name": "C",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "16452_109",
+            "name": "E",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "16453_109",
+            "name": "F",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "16454_109",
+            "name": "H",
+            "agency": "DSB S-tog"
+        },
+        {
+            "route_id": "11746_2",
+            "name": "IC",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "11747_2",
+            "name": "ICL",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "21848_2",
+            "name": "RE",
+            "agency": "DSB"
+        },
+        {
+            "route_id": "11748_2",
+            "name": "RE",
+            "agency": "DSB"
+        }
+    ],
+    "ferry": [
+        {
+            "route_id": "19588_4",
+            "name": "991",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "19589_4",
+            "name": "992",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26174_4",
+            "name": "993",
+            "agency": "Movia"
+        },
+        {
+            "route_id": "26510_4",
+            "name": "Læsø",
+            "agency": "NT"
+        },
+        {
+            "route_id": "25894_4",
+            "name": "Samsø Rederi",
+            "agency": "Samsø Rederi"
+        },
+        {
+            "route_id": "25895_4",
+            "name": "Samsø Rederi",
+            "agency": "Samsø Rederi"
+        },
+        {
+            "route_id": "25873_4",
+            "name": "Ærøfærgerne",
+            "agency": "Ærøfærgerne"
+        },
+        {
+            "route_id": "25877_4",
+            "name": "Ærøfærgerne",
+            "agency": "Ærøfærgerne"
+        },
+        {
+            "route_id": "25874_4",
+            "name": "Ærøfærgerne",
+            "agency": "Ærøfærgerne"
+        },
+        {
+            "route_id": "25883_4",
+            "name": "ÆrøXpressen",
+            "agency": "ÆrøXpressen A/S"
+        }
+    ],
+    "metro": [
+        {
+            "route_id": "21296_1",
+            "name": "M1",
+            "agency": "Metroselskabet"
+        },
+        {
+            "route_id": "21295_1",
+            "name": "M2",
+            "agency": "Metroselskabet"
+        },
+        {
+            "route_id": "24759_1",
+            "name": "M3",
+            "agency": "Metroselskabet"
+        },
+        {
+            "route_id": "24864_1",
+            "name": "M4",
+            "agency": "Metroselskabet"
+        }
+    ]
+}
