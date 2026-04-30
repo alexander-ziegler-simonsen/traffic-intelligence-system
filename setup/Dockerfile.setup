@@ -1,0 +1,47 @@
+# Dockerfile.setup — builds a self-contained setup image with all required tools.
+# Tilemaker and tippecanoe are compiled from source so no host installs are needed.
+#
+# Build:  docker build -f setup/Dockerfile.setup -t traffic-setup .
+# Run:    docker run --rm -v "$(pwd):/app" traffic-setup
+#         (Windows PS) docker run --rm -v "${PWD}:/app" traffic-setup
+
+# Stage 1: build tilemaker (mirrors their own Dockerfile)
+FROM debian:bookworm-slim AS tilemaker-build
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates build-essential git cmake \
+    liblua5.1-0-dev libsqlite3-dev libshp-dev rapidjson-dev \
+    libboost-program-options-dev libboost-filesystem-dev libboost-system-dev \
+    luarocks \
+    && rm -rf /var/lib/apt/lists/* \
+    && luarocks install luaflock
+RUN git clone --depth 1 https://github.com/systemed/tilemaker.git /tmp/tilemaker
+RUN cd /tmp/tilemaker \
+    && mkdir build && cd build \
+    && cmake -DCMAKE_BUILD_TYPE=Release -DBoost_USE_DEBUG_RUNTIME=OFF .. \
+    && cmake --build . --parallel $(nproc) \
+    && strip tilemaker
+
+# Stage 2: build tippecanoe
+FROM debian:bookworm-slim AS tippecanoe-build
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates build-essential git libsqlite3-dev zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
+RUN git clone --depth 1 https://github.com/felt/tippecanoe.git /tmp/tippecanoe
+RUN cd /tmp/tippecanoe && make -j$(nproc) && strip tippecanoe
+
+# Final image — only the binaries and runtime deps
+FROM debian:bookworm-slim
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates liblua5.1-0 shapelib libsqlite3-0 \
+    libboost-filesystem1.74.0 libboost-program-options1.74.0 \
+    gdal-bin python3 curl unzip \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=tilemaker-build /tmp/tilemaker/build/tilemaker /usr/local/bin/tilemaker
+COPY --from=tilemaker-build /usr/local/lib/lua/5.1/flock.so /usr/local/lib/lua/5.1/flock.so
+COPY --from=tilemaker-build /tmp/tilemaker/process.lua /tilemaker/process.lua
+COPY --from=tilemaker-build /tmp/tilemaker/resources /tilemaker/resources
+COPY --from=tippecanoe-build /tmp/tippecanoe/tippecanoe /usr/local/bin/tippecanoe
+
+WORKDIR /app
+ENTRYPOINT ["bash", "/app/setup/setup-entrypoint.sh"]

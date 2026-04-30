@@ -1,0 +1,6 @@
+
+# this takes 7 - 12 mins the first time you run it
+docker build -f setup/Dockerfile.setup -t traffic-setup .
+
+# this takes around 10 - 25 mins - depending on net speed, cpu power and ram size
+docker run --rm -v "$(pwd):/app" traffic-setup

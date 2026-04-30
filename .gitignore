@@ -1,3 +1,21 @@
+# Geodata — large source files and generated output only (scripts/configs are tracked)
+geodata/*.osm.pbf
+geodata/denmark.pmtiles
+geodata/GTFS/
+geodata/tilemaker/
+geodata/tmp/
+geodata/gtfs-geojson/
+geodata/gtfs/
+geodata/denmark-outline.pmtiles
+geodata/water.pmtiles
+geodata/ferry-routes.pmtiles
+geodata/light-rail-routes.pmtiles
+geodata/metro-routes.pmtiles
+geodata/train-routes.pmtiles
+geodata/bus-routes.pmtiles
+geodata/bus-stops.pmtiles
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/node,dotnetcore,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,dotnetcore,macos,windows
 

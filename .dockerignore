@@ -1,0 +1,17 @@
+# this is used for the ./setup dockerfile
+
+# Exclude large generated/downloaded data files from the build context.
+# These are all outputs — they don't need to be sent to the Docker daemon when building.
+geodata/*.pbf
+geodata/*.pmtiles
+geodata/GTFS/
+geodata/gtfs-geojson/
+geodata/gtfs/
+geodata/tilemaker/
+geodata/tmp-water/
+
+# Client build artifacts
+client/node_modules/
+client/dist/
+
+.git/
