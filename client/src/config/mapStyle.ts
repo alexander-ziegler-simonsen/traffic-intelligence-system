@@ -187,14 +187,24 @@ export function buildMapStyle(martinUrl: string, t: Theme): maplibregl.StyleSpec
         paint: { 'circle-color': t.incident, 'circle-radius': 7, 'circle-stroke-color': '#fff', 'circle-stroke-width': 1.5, 'circle-opacity': 0.95 },
       },
       {
-        id: 'vehicles-bus', type: 'circle', source: 'vehicles',
+        id: 'vehicles-bus', type: 'symbol', source: 'vehicles',
         filter: ['==', ['get', 'type'], 'bus'],
-        paint: { 'circle-color': t.bus, 'circle-radius': 6, 'circle-stroke-color': '#fff', 'circle-stroke-width': 1 },
+        layout: {
+          'icon-image': 'vehicle-bus',
+          'icon-size': 1,
+          'icon-allow-overlap': true,
+          'icon-ignore-placement': true,
+        },
       },
       {
-        id: 'vehicles-train', type: 'circle', source: 'vehicles',
+        id: 'vehicles-train', type: 'symbol', source: 'vehicles',
         filter: ['==', ['get', 'type'], 'train'],
-        paint: { 'circle-color': t.train, 'circle-radius': 8, 'circle-stroke-color': '#fff', 'circle-stroke-width': 1.5 },
+        layout: {
+          'icon-image': 'vehicle-train',
+          'icon-size': 1,
+          'icon-allow-overlap': true,
+          'icon-ignore-placement': true,
+        },
       },
     ],
   }

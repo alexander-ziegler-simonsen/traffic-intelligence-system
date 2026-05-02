@@ -18,6 +18,7 @@ export interface Settings {
   showTrafficSignals: boolean
   vehiclesPollMs: number
   incidentsPollMs: number
+  vehicleIconSize: number
 }
 
 const STORAGE_KEY = 'tis-settings'
@@ -39,6 +40,7 @@ const defaults: Settings = {
   showTrafficSignals: true,
   vehiclesPollMs: 5000,
   incidentsPollMs: 10000,
+  vehicleIconSize: 0.5,
 }
 
 function load(): Settings {

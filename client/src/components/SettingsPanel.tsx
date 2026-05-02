@@ -57,6 +57,18 @@ export default function SettingsPanel() {
               <span className="dot" style={{ background: t.incident }} />
               Incidents
             </label>
+            <div className="interval-row">
+              Icon size
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <input
+                  type="range" min={0.2} max={1.0} step={0.05}
+                  value={settings.vehicleIconSize}
+                  onChange={e => update({ vehicleIconSize: Number(e.target.value) })}
+                  style={{ width: 80 }}
+                />
+                <span style={{ minWidth: 28, textAlign: 'right' }}>{settings.vehicleIconSize.toFixed(2)}</span>
+              </div>
+            </div>
           </section>
 
           <section>
