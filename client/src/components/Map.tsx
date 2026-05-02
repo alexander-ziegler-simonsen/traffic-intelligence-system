@@ -9,6 +9,36 @@ import './Map.css'
 
 const MARTIN_URL = import.meta.env.VITE_MARTIN_URL ?? 'http://localhost:3000'
 
+function iconSizeExpr(scale: number): maplibregl.ExpressionSpecification {
+  return ['interpolate', ['linear'], ['zoom'],
+    5,  0.15 * scale,
+    8,  0.35 * scale,
+    11, 0.65 * scale,
+    14, 1.0  * scale,
+  ]
+}
+
+function createVehicleIcon(bgColor: string, label: string): ImageData {
+  const S = 26
+  const canvas = document.createElement('canvas')
+  canvas.width = S
+  canvas.height = S
+  const ctx = canvas.getContext('2d')!
+  ctx.fillStyle = bgColor
+  ctx.beginPath()
+  ctx.roundRect(1, 1, S - 2, S - 2, 5)
+  ctx.fill()
+  ctx.strokeStyle = 'rgba(255,255,255,0.85)'
+  ctx.lineWidth = 1.5
+  ctx.stroke()
+  ctx.fillStyle = '#ffffff'
+  ctx.font = 'bold 13px system-ui, sans-serif'
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.fillText(label, S / 2, S / 2 + 0.5)
+  return ctx.getImageData(0, 0, S, S)
+}
+
 
 const CITIES = [
   { label: 'Hovedstadsområdet', center: [12.57, 55.68] as [number, number], zoom: 11 },
@@ -71,10 +101,28 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
     map.on('load', () => {
       loadedRef.current = true
 
+      map.addImage('vehicle-bus',   createVehicleIcon('#16a34a', 'B'))
+      map.addImage('vehicle-train', createVehicleIcon('#2563eb', 'T'))
+      const initialSizeExpr = iconSizeExpr(settings.vehicleIconSize)
+      map.setLayoutProperty('vehicles-bus',   'icon-size', initialSizeExpr)
+      map.setLayoutProperty('vehicles-train', 'icon-size', initialSizeExpr)
+
       const STOP_LAYERS = ['bus-stops', 'train-stations'] as const
 
-      // Single mousemove handler with priority: route > stop > road name
+      // Single mousemove handler with priority: vehicle > route > stop > road name
       map.on('mousemove', (e) => {
+        const vehicleFeats = map.queryRenderedFeatures(e.point, { layers: ['vehicles-bus', 'vehicles-train'] })
+        if (vehicleFeats.length) {
+          const { type = '', route_name = '' } = vehicleFeats[0].properties ?? {}
+          const label = type === 'train' ? 'Train' : 'Bus'
+          map.getCanvas().style.cursor = 'pointer'
+          setTooltip({
+            x: e.point.x, y: e.point.y,
+            text: route_name ? `${label} ${route_name}` : label,
+          })
+          return
+        }
+
         const routeFeats = map.queryRenderedFeatures(e.point, { layers: [...ROUTE_LAYERS] })
         if (routeFeats.length) {
           const { name = '', agency = '', direction = 0 } = routeFeats[0].properties ?? {}
@@ -146,8 +194,6 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
     map.setPaintProperty('rail', 'line-color', theme.rail)
     map.setPaintProperty('incidents-halo', 'circle-color', theme.incident)
     map.setPaintProperty('incidents-dot', 'circle-color', theme.incident)
-    map.setPaintProperty('vehicles-bus', 'circle-color', theme.bus)
-    map.setPaintProperty('vehicles-train', 'circle-color', theme.train)
     map.setPaintProperty('gtfs-bus-routes', 'line-color', theme.busRoute)
     map.setPaintProperty('gtfs-train-routes', 'line-color', theme.trainRoute)
     map.setPaintProperty('gtfs-metro-routes', 'line-color', theme.metroRoute)
@@ -200,6 +246,15 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
       if (map.getLayer(layerId)) map.setFilter(layerId, filter)
     }
   }, [disabledRoutes])
+
+  // Apply vehicle icon size
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !loadedRef.current) return
+    const expr = iconSizeExpr(settings.vehicleIconSize)
+    map.setLayoutProperty('vehicles-bus',   'icon-size', expr)
+    map.setLayoutProperty('vehicles-train', 'icon-size', expr)
+  }, [settings.vehicleIconSize])
 
   // Update live data sources
   useEffect(() => {
