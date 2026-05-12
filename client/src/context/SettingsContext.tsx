@@ -62,7 +62,7 @@ interface SettingsContextValue {
 
 const SettingsContext = createContext<SettingsContextValue | null>(null)
 
-export function SettingsProvider({ children }: { children: ReactNode }) {
+export function AppConfigProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<Settings>(load)
 
   const update = useCallback((patch: Partial<Settings>) => {
@@ -82,6 +82,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
 export function useSettings() {
   const ctx = useContext(SettingsContext)
-  if (!ctx) throw new Error('useSettings must be used inside SettingsProvider')
+  if (!ctx) throw new Error('useSettings must be used inside AppConfigProvider')
   return ctx
 }

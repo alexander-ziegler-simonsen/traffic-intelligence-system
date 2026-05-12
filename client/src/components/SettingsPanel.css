@@ -174,3 +174,20 @@
   outline: none;
   border-color: #7070cc;
 }
+
+/* Icon size controls */
+
+.icon-size-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-size-range {
+  width: 80px;
+}
+
+.icon-size-value {
+  min-width: 28px;
+  text-align: right;
+}

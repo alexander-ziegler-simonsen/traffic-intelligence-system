@@ -272,64 +272,18 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
   }
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div className="map-wrapper">
       <div ref={containerRef} className="map-container" />
-      <div style={{
-        position: 'absolute', top: 12, left: '50%', transform: 'translateX(-50%)',
-        display: 'flex', gap: 6, flexWrap: 'wrap', justifyContent: 'center',
-        zIndex: 10, pointerEvents: 'auto', maxWidth: 'calc(100vw - 120px)',
-      }}>
+      <div className="city-nav">
         {CITIES.map(city => (
-          <button
-            key={city.label}
-            onClick={() => flyToCity(city.center, city.zoom)}
-            style={{
-              padding: '5px 11px',
-              background: '#1a1a2a',
-              color: '#e0e0f0',
-              border: '1px solid #2e2e4a',
-              borderRadius: 5,
-              fontSize: 12,
-              fontFamily: 'system-ui, sans-serif',
-              cursor: 'pointer',
-              boxShadow: '0 2px 6px rgba(0,0,0,0.45)',
-              whiteSpace: 'nowrap',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#2a2a3e')}
-            onMouseLeave={e => (e.currentTarget.style.background = '#1a1a2a')}
-          >
-            {city.label}
-          </button>
+          <button key={city.label} className="city-btn" onClick={() => flyToCity(city.center, city.zoom)}>{city.label}</button>
         ))}
       </div>
       {tooltip && (
-        <div style={{
-          position: 'absolute',
-          left: tooltip.x + 14,
-          top: tooltip.y - 32,
-          background: '#1a1a2a',
-          color: '#fff',
-          padding: '4px 10px',
-          borderRadius: 4,
-          fontSize: 13,
-          fontFamily: 'system-ui, sans-serif',
-          pointerEvents: 'none',
-          border: '1px solid #2e2e4a',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
-          zIndex: 20,
-          whiteSpace: 'nowrap',
-        }}>
-          {tooltip.text}
-        </div>
+        <div className="map-tooltip" style={{ left: tooltip.x + 14, top: tooltip.y - 32 }}>{tooltip.text}</div>
       )}
       {martinDown && (
-        <div style={{
-          position: 'absolute', top: 12, left: '50%', transform: 'translateX(-50%)',
-          background: '#b91c1c', color: '#fff', padding: '8px 16px', borderRadius: 6,
-          fontFamily: 'sans-serif', fontSize: 14, zIndex: 10, pointerEvents: 'none',
-        }}>
-          Map tiles unavailable — Martin tile server is not running
-        </div>
+        <div className="martin-banner">Map tiles unavailable — Martin tile server is not running</div>
       )}
     </div>
   )
