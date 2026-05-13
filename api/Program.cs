@@ -9,8 +9,13 @@ using TisApi.Mappers;
 using TisApi.Messaging.Consumers;
 using TisApi.Services;
 using TisApi.Services.Interfaces;
+using TisApi.Simulation;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -47,6 +52,10 @@ builder.Services.AddHostedService<IncidentCreatedConsumer>();
 builder.Services.AddHostedService<IncidentDeletedConsumer>();
 builder.Services.AddHostedService<CameraStatusChangedConsumer>();
 
+// Vehicle simulator
+builder.Services.AddSingleton<SimulatorState>();
+builder.Services.AddHostedService<VehicleSimulator>();
+
 // Mappers
 builder.Services.AddSingleton<RoadMapper>();
 builder.Services.AddSingleton<CameraMapper>();
@@ -70,6 +79,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 app.UseAuthorization();
 app.MapControllers();
 
