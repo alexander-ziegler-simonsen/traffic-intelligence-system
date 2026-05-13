@@ -16,6 +16,6 @@ public class IncidentCreatedConsumer(
     protected override async Task HandleAsync(IncidentCreated msg, IServiceProvider services, CancellationToken ct)
     {
         var incidentService = services.GetRequiredService<IIncidentService>();
-        await incidentService.CreateAsync(new CreateIncidentRequest(msg.CameraId, msg.Type, msg.Severity, msg.RecordedAt));
+        await incidentService.CreateAsync(new CreateIncidentRequest(msg.Type, msg.Status, msg.Lat, msg.Lng, msg.RoadSegmentId, msg.Description, msg.ReportedAt));
     }
 }

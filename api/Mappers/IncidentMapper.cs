@@ -8,11 +8,12 @@ namespace TisApi.Mappers;
 [Mapper]
 public partial class IncidentMapper
 {
-    [MapperIgnoreSource(nameof(Incident.Camera))]
     public partial IncidentDto ToDto(Incident incident);
 
     [MapperIgnoreTarget(nameof(Incident.Id))]
-    [MapperIgnoreTarget(nameof(Incident.Camera))]
-    [MapperIgnoreTarget(nameof(Incident.RecordedAt))]
+    [MapperIgnoreTarget(nameof(Incident.ResolvedAt))]
+    [MapperIgnoreTarget(nameof(Incident.IncidentEvents))]
+    [MapperIgnoreTarget(nameof(Incident.RouteImpacts))]
+    [MapperIgnoreTarget(nameof(Incident.WebhookDeliveries))]
     public partial Incident ToEntity(CreateIncidentRequest request);
 }

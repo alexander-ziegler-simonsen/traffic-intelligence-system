@@ -1,3 +1,3 @@
 namespace TisApi.Messaging.Contracts;
 
-public record IncidentDeleted(int IncidentId);
+public record IncidentDeleted(Guid IncidentId);

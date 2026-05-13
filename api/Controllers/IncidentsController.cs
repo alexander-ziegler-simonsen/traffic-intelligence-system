@@ -10,13 +10,12 @@ public class IncidentsController(IIncidentService incidents) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetAll(
-        [FromQuery] int? cameraId = null,
         [FromQuery] string? type = null,
-        [FromQuery] short? minSeverity = null) =>
-        Ok(await incidents.GetAllAsync(cameraId, type, minSeverity));
+        [FromQuery] string? status = null) =>
+        Ok(await incidents.GetAllAsync(type, status));
 
-    [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetById(int id)
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> GetById(Guid id)
     {
         var incident = await incidents.GetByIdAsync(id);
         return incident is null ? NotFound() : Ok(incident);
@@ -29,8 +28,8 @@ public class IncidentsController(IIncidentService incidents) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = incident.Id }, incident);
     }
 
-    [HttpDelete("{id:int}")]
-    public async Task<IActionResult> Delete(int id)
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Delete(Guid id)
     {
         var deleted = await incidents.DeleteAsync(id);
         return deleted ? NoContent() : NotFound();

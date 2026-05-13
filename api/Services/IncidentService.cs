@@ -9,19 +9,18 @@ namespace TisApi.Services;
 
 public class IncidentService(TisPostgresContext db, IncidentMapper mapper) : IIncidentService
 {
-    public async Task<IReadOnlyList<IncidentDto>> GetAllAsync(int? cameraId = null, string? type = null, short? minSeverity = null)
+    public async Task<IReadOnlyList<IncidentDto>> GetAllAsync(string? type = null, string? status = null)
     {
         var query = db.Incidents.AsNoTracking();
 
-        if (cameraId.HasValue) query = query.Where(i => i.CameraId == cameraId.Value);
-        if (!string.IsNullOrEmpty(type)) query = query.Where(i => i.Type == type);
-        if (minSeverity.HasValue) query = query.Where(i => i.Severity >= minSeverity.Value);
+        if (!string.IsNullOrEmpty(type))   query = query.Where(i => i.Type   == type);
+        if (!string.IsNullOrEmpty(status)) query = query.Where(i => i.Status == status);
 
-        return (await query.OrderByDescending(i => i.RecordedAt).ToListAsync())
+        return (await query.OrderByDescending(i => i.ReportedAt).ToListAsync())
             .Select(mapper.ToDto).ToList();
     }
 
-    public async Task<IncidentDto?> GetByIdAsync(int id)
+    public async Task<IncidentDto?> GetByIdAsync(Guid id)
     {
         var incident = await db.Incidents.AsNoTracking().FirstOrDefaultAsync(i => i.Id == id);
         return incident is null ? null : mapper.ToDto(incident);
@@ -30,7 +29,7 @@ public class IncidentService(TisPostgresContext db, IncidentMapper mapper) : IIn
     public async Task<IncidentDto> CreateAsync(CreateIncidentRequest request)
     {
         var incident = mapper.ToEntity(request);
-        incident.RecordedAt = request.RecordedAt ?? DateTimeOffset.UtcNow;
+        incident.ReportedAt = request.ReportedAt ?? DateTimeOffset.UtcNow;
 
         db.Incidents.Add(incident);
         await db.SaveChangesAsync();
@@ -38,7 +37,7 @@ public class IncidentService(TisPostgresContext db, IncidentMapper mapper) : IIn
         return mapper.ToDto(incident);
     }
 
-    public async Task<bool> DeleteAsync(int id)
+    public async Task<bool> DeleteAsync(Guid id)
     {
         var incident = await db.Incidents.FindAsync(id);
         if (incident is null) return false;

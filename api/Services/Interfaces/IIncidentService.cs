@@ -5,8 +5,8 @@ namespace TisApi.Services.Interfaces;
 
 public interface IIncidentService
 {
-    Task<IReadOnlyList<IncidentDto>> GetAllAsync(int? cameraId = null, string? type = null, short? minSeverity = null);
-    Task<IncidentDto?> GetByIdAsync(int id);
+    Task<IReadOnlyList<IncidentDto>> GetAllAsync(string? type = null, string? status = null);
+    Task<IncidentDto?> GetByIdAsync(Guid id);
     Task<IncidentDto> CreateAsync(CreateIncidentRequest request);
-    Task<bool> DeleteAsync(int id);
+    Task<bool> DeleteAsync(Guid id);
 }

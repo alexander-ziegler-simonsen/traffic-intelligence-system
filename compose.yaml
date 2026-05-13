@@ -125,6 +125,8 @@ services:
   #     RabbitMQ__Host:     rabbitmq
   #     RabbitMQ__Username: ${RABBITMQ_USER}
   #     RabbitMQ__Password: ${RABBITMQ_PASSWORD}
+  #   volumes:
+  #     - ./geodata/GTFS:/data/gtfs:ro
   #   ports:
   #     - "${API_PORT}:5000"
   #   depends_on:

@@ -1,8 +1,11 @@
 namespace TisApi.Messaging.Contracts;
 
 public record IncidentCreated(
-    int CameraId,
     string Type,
-    short Severity,
-    DateTimeOffset RecordedAt
+    string Status,
+    double Lat,
+    double Lng,
+    string RoadSegmentId,
+    string Description = "",
+    DateTimeOffset? ReportedAt = null
 );
