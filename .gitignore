@@ -4,6 +4,8 @@ geodata/denmark.pmtiles
 geodata/GTFS/
 geodata/tilemaker/
 geodata/tmp/
+geodata/osm-roads-cache/
+geodata/mismatch-report/
 geodata/gtfs-geojson/
 geodata/gtfs/
 geodata/denmark-outline.pmtiles
