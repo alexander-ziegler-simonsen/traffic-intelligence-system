@@ -3,7 +3,7 @@ services:
   # Databases
 
   postgres:
-    image: postgres:17
+    image: postgres:18
     container_name: db-tis-postgres
     restart: unless-stopped
     environment:
@@ -13,7 +13,7 @@ services:
     ports:
       - "${POSTGRES_PORT}:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
       - ./init/postgres:/docker-entrypoint-initdb.d
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
@@ -23,28 +23,6 @@ services:
       start_period: 30s
     networks:
       - internal
-
-  # mongo:
-  #   image: mongo:8
-  #   container_name: db-tis-mongo
-  #   restart: unless-stopped
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-  #     MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-  #     MONGO_INITDB_DATABASE:      ${MONGO_INITDB_DATABASE}
-  #   ports:
-  #     - "${MONGO_PORT}:27017"
-  #   volumes:
-  #     - mongo_data:/data/db
-  #     - ./init/mongo:/docker-entrypoint-initdb.d
-  #   healthcheck:
-  #     test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand('ping').ok"]
-  #     interval: 5s
-  #     timeout: 10s
-  #     retries: 20
-  #     start_period: 10s
-  #   networks:
-  #     - internal
 
   redis:
     image: redis:7
@@ -160,7 +138,6 @@ services:
 
 volumes:
   postgres_data:
-  #mongo_data:
   redis_data:
   rabbitmq_data:
 
