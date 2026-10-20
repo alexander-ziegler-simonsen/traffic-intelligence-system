@@ -3,7 +3,7 @@ services:
   # Databases
 
   postgres:
-    image: postgis/postgis:18-3.6
+    image: imresamu/postgis:18-3.6
     container_name: db-tis-postgres
     restart: unless-stopped
     environment:
@@ -67,7 +67,6 @@ services:
 
   valhalla:
     image: ghcr.io/valhalla/valhalla-scripted:3.9.1
-    platform: linux/amd64
     container_name: tis-valhalla
     restart: unless-stopped
     environment:
