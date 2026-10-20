@@ -1,6 +1,8 @@
 // Shapes of the rows the API returns (camelCase JSON of api/Dtos/Output).
 // Timestamps are ISO strings; nullable columns are `| null`.
 
+import type { Geometry } from 'geojson'
+
 export type Guid = string
 
 export interface VehicleType {
@@ -69,6 +71,8 @@ export interface Disruption {
   id: Guid
   cause: string
   description: string | null
+  /** Shape drawn on the map (lng/lat). When set, the API fills in the disruption's stops and segments from it */
+  geometry: Geometry | null
   validFrom: string
   validTo: string | null
   createdAt: string
@@ -85,6 +89,12 @@ export interface DisruptionSegment {
   fkDisruptionId: Guid
   fkFromStopId: Guid
   fkToStopId: Guid
+}
+
+/** The stops and route segments a disruption's shape covers (POST /disruptions/impact) */
+export interface DisruptionImpact {
+  stopIds: Guid[]
+  segments: Pick<DisruptionSegment, 'fkFromStopId' | 'fkToStopId'>[]
 }
 
 /** Body for create/update — the server assigns `id` and `createdAt` */

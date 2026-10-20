@@ -1,9 +1,10 @@
 import { useMemo, useRef, useState } from 'react'
 import { ActionIcon, Affix, Badge, Button, CloseButton, Divider, FileButton, Group, Paper, Popover, ScrollArea, Text, ThemeIcon, Title, UnstyledButton } from '@mantine/core'
-import { IconDownload, IconStack2, IconTrash, IconUpload } from '@tabler/icons-react'
+import { IconBarrierBlock, IconDownload, IconStack2, IconTrash, IconUpload } from '@tabler/icons-react'
 import type { GeoJSONStoreFeatures } from 'terra-draw'
+import CreateDisruptionModal from '../disruptions/CreateDisruptionModal'
 import { DRAW_COLOR, drawToolFor } from '../../config/drawTools'
-import { useDraw } from '../../hooks/useDraw'
+import { useDraw, type FeatureId } from '../../hooks/useDraw'
 import { toFeatureCollection } from '../../utils/drawFeatures'
 import { formatArea, formatDistance, lineLengthMeters, polygonAreaSquareMeters } from '../../utils/geo'
 import './DrawPanel.css'
@@ -33,10 +34,17 @@ function downloadGeoJSON(features: GeoJSONStoreFeatures[]) {
   URL.revokeObjectURL(url)
 }
 
-export default function DrawPanel() {
+interface Props {
+  /** Called once a shape has been saved as a disruption */
+  onDisruptionCreated?: () => void
+}
+
+export default function DrawPanel({ onDisruptionCreated }: Props) {
   const [open, setOpen] = useState(false)
   const [confirmClear, setConfirmClear] = useState(false)
   const [notice, setNotice] = useState<string | null>(null)
+  // The shape the "new disruption" form is open for
+  const [draft, setDraft] = useState<{ id: FeatureId; feature: GeoJSONStoreFeatures; name: string } | null>(null)
   const resetFileRef = useRef<() => void>(null)
   const { ready, features, selectedId, selectFeature, deleteFeature, clearAll, importGeoJSON } = useDraw()
 
@@ -70,6 +78,14 @@ export default function DrawPanel() {
     setNotice(null)
   }
 
+  const handleDisruptionCreated = (id: FeatureId, name: string) => {
+    // The map shows it as a disruption from now on, so the drawing isn't needed any more
+    deleteFeature(id)
+    setDraft(null)
+    setNotice(`${name} is now a disruption`)
+    onDisruptionCreated?.()
+  }
+
   return (
     <Affix position={{ bottom: 10, left: 10 }} zIndex={10} withinPortal={false}>
       {open && (
@@ -95,6 +111,9 @@ export default function DrawPanel() {
                         <Text size="xs" fw={500} className="dp-name">{name}</Text>
                         <Text fz={11} c="dimmed" className="dp-measure" truncate>{measurement}</Text>
                       </UnstyledButton>
+                      <ActionIcon variant="subtle" color="gray" size="sm" onClick={() => setDraft({ id, feature, name })} title="Create disruption" aria-label={`Create disruption from ${name}`}>
+                        <IconBarrierBlock size={14} />
+                      </ActionIcon>
                       <ActionIcon variant="subtle" color="gray" size="sm" onClick={() => deleteFeature(id)} title="Delete" aria-label={`Delete ${name}`}>
                         <IconTrash size={14} />
                       </ActionIcon>
@@ -141,6 +160,11 @@ export default function DrawPanel() {
       >
         Shapes
       </Button>
+
+      {draft && (
+        <CreateDisruptionModal geometry={draft.feature.geometry} name={draft.name} onClose={() => setDraft(null)}
+          onCreated={() => handleDisruptionCreated(draft.id, draft.name)} />
+      )}
     </Affix>
   )
 }

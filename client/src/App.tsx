@@ -1,3 +1,4 @@
+import { useReducer } from 'react'
 import Map from './components/map/Map'
 import SettingsPanel from './components/settings/SettingsPanel'
 import RoutePanel from './components/routes/RoutePanel'
@@ -15,7 +16,9 @@ function AppInner() {
   const { settings } = useSettings()
   const { disabledRoutes } = useRoutes()
   const vehicles = useVehicles(settings.vehiclesPollMs)
-  const incidents = useDisruptions(settings.incidentsPollMs)
+  // Bumped when a shape becomes a disruption, so it shows up without waiting for the next poll
+  const [disruptionsVersion, reloadDisruptions] = useReducer((n: number) => n + 1, 0)
+  const incidents = useDisruptions(settings.incidentsPollMs, disruptionsVersion)
   const { mode: drawMode } = useDraw()
 
   return (
@@ -24,7 +27,7 @@ function AppInner() {
       <SettingsPanel />
       <RoutePanel />
       <DrawToolbar />
-      <DrawPanel />
+      <DrawPanel onDisruptionCreated={reloadDisruptions} />
     </>
   )
 }

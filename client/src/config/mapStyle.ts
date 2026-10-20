@@ -178,6 +178,17 @@ export function buildMapStyle(martinUrl: string, t: Theme): maplibregl.StyleSpec
         id: 'traffic-signals', type: 'circle', source: 'denmark', 'source-layer': 'traffic_signals',
         paint: { 'circle-color': t.trafficSignal, 'circle-radius': 3.5, 'circle-stroke-color': '#000', 'circle-stroke-width': 0.5 },
       },
+      // Areas drawn as disruptions; drawn lines and points use the segment and stop layers below
+      {
+        id: 'incidents-area', type: 'fill', source: 'incidents',
+        filter: ['==', ['geometry-type'], 'Polygon'],
+        paint: { 'fill-color': t.incident, 'fill-opacity': 0.15 },
+      },
+      {
+        id: 'incidents-area-outline', type: 'line', source: 'incidents',
+        filter: ['==', ['geometry-type'], 'Polygon'],
+        paint: { 'line-color': t.incident, 'line-width': 2, 'line-dasharray': [2, 1.5] },
+      },
       {
         id: 'incidents-segment', type: 'line', source: 'incidents',
         filter: ['==', ['geometry-type'], 'LineString'],

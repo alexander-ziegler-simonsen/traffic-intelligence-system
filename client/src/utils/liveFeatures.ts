@@ -70,7 +70,8 @@ export function isActive(disruption: Disruption, now: number) {
 }
 
 /**
- * Disruptions in effect at `now`: a point for each blocked stop and a line for each blocked segment.
+ * Disruptions in effect at `now`: the shape each was drawn as (if any),
+ * a point for each blocked stop and a line for each blocked segment.
  */
 export function disruptionFeatures(
   { disruptions, disruptionStops, disruptionSegments, stops }: DisruptionData,
@@ -80,6 +81,10 @@ export function disruptionFeatures(
   const activeById = new Map(disruptions.filter(d => isActive(d, now)).map(d => [d.id, d]))
 
   const properties = (d: Disruption) => ({ disruption_id: d.id, cause: d.cause, description: d.description })
+
+  const shapes = [...activeById.values()].flatMap<Feature>(d =>
+    d.geometry ? [{ type: 'Feature', geometry: d.geometry, properties: properties(d) }] : [],
+  )
 
   const points = disruptionStops.flatMap<Feature>(ds => {
     const disruption = activeById.get(ds.fkDisruptionId)
@@ -100,5 +105,5 @@ export function disruptionFeatures(
     }]
   })
 
-  return collection([...lines, ...points])
+  return collection([...shapes, ...lines, ...points])
 }

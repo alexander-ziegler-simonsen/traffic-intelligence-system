@@ -6,8 +6,11 @@ import { disruptionFeatures } from '../utils/liveFeatures'
 
 const EMPTY: FeatureCollection = { type: 'FeatureCollection', features: [] }
 
-/** Active disruptions as map features: points for blocked stops, lines for blocked segments */
-export function useDisruptions(intervalMs = 10000) {
+/**
+ * Active disruptions as map features: their drawn shapes, points for blocked stops, lines for blocked segments.
+ * Changing `reloadKey` fetches again straight away, e.g. after a disruption was created.
+ */
+export function useDisruptions(intervalMs = 10000, reloadKey = 0) {
   const [data, setData] = useState<FeatureCollection>(EMPTY)
 
   useEffect(() => {
@@ -33,7 +36,7 @@ export function useDisruptions(intervalMs = 10000) {
       active = false
       clearInterval(id)
     }
-  }, [intervalMs])
+  }, [intervalMs, reloadKey])
 
   return data
 }

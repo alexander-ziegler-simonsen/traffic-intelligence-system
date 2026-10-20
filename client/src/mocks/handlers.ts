@@ -1,8 +1,10 @@
 import { http, HttpResponse } from 'msw'
 import type {
   Disruption,
+  DisruptionImpact,
   DisruptionSegment,
   DisruptionStop,
+  NewEntity,
   Stop,
   UsingJourney,
   UsingJourneyLog,
@@ -61,6 +63,7 @@ export const disruptions: Disruption[] = [
     id: ROADWORK,
     cause: 'roadwork',
     description: 'Road closed between Nørreport and Nyhavn',
+    geometry: null,
     validFrom: '2026-01-01T00:00:00Z',
     validTo: null,
     createdAt: '2026-01-01T00:00:00Z',
@@ -69,6 +72,7 @@ export const disruptions: Disruption[] = [
     id: EXPIRED,
     cause: 'accident',
     description: null,
+    geometry: null,
     validFrom: '2026-01-01T00:00:00Z',
     validTo: '2026-01-02T00:00:00Z',
     createdAt: '2026-01-01T00:00:00Z',
@@ -90,12 +94,28 @@ const collections: Record<string, unknown[]> = {
   'stops': stops,
   'using-journeys': usingJourneys,
   'using-journey-logs': usingJourneyLogs,
-  'disruptions': disruptions,
   'disruption-stops': disruptionStops,
   'disruption-segments': disruptionSegments,
 }
 
+// Disruptions created while running `pnpm dev:mock`, kept apart so the fixtures above stay as the tests expect
+const createdDisruptions: Disruption[] = []
+
 // `*/` matches any origin, so these work regardless of VITE_API_URL
-export const handlers = Object.entries(collections).map(([path, rows]) =>
-  http.get(`*/${path}`, () => HttpResponse.json(rows)),
-)
+export const handlers = [
+  ...Object.entries(collections).map(([path, rows]) =>
+    http.get(`*/${path}`, () => HttpResponse.json(rows)),
+  ),
+
+  http.get('*/disruptions', () => HttpResponse.json([...disruptions, ...createdDisruptions])),
+
+  http.post('*/disruptions', async ({ request }) => {
+    const input = await request.json() as NewEntity<Disruption>
+    const created: Disruption = { ...input, id: crypto.randomUUID(), createdAt: new Date().toISOString() }
+    createdDisruptions.push(created)
+    return HttpResponse.json(created, { status: 201 })
+  }),
+
+  // The real API finds blocked stops with PostGIS; without it nothing is ever blocked
+  http.post('*/disruptions/impact', () => HttpResponse.json<DisruptionImpact>({ stopIds: [], segments: [] })),
+]
