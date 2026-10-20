@@ -10,6 +10,7 @@ import { MapProvider } from './context/MapContext'
 import { DrawProvider } from './context/DrawContext'
 import { useVehicles } from './hooks/useVehicles'
 import { useDisruptions } from './hooks/useDisruptions'
+import { useDiversions } from './hooks/useDiversions'
 import { useDraw } from './hooks/useDraw'
 
 function AppInner() {
@@ -19,11 +20,12 @@ function AppInner() {
   // Bumped when a shape becomes a disruption, so it shows up without waiting for the next poll
   const [disruptionsVersion, reloadDisruptions] = useReducer((n: number) => n + 1, 0)
   const incidents = useDisruptions(settings.incidentsPollMs, disruptionsVersion)
+  const diversions = useDiversions(settings.incidentsPollMs, disruptionsVersion)
   const { mode: drawMode } = useDraw()
 
   return (
     <>
-      <Map vehicles={vehicles} incidents={incidents} disabledRoutes={disabledRoutes} hoverEnabled={drawMode === 'static'} />
+      <Map vehicles={vehicles} incidents={incidents} diversions={diversions} disabledRoutes={disabledRoutes} hoverEnabled={drawMode === 'static'} />
       <SettingsPanel />
       <RoutePanel />
       <DrawToolbar />

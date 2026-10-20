@@ -41,6 +41,16 @@ else
   python3 /app/geodata/gtfs_to_geojson.py --output "$GEOJSON_DIR"
 fi
 
+# Step 3b: Postgres seed with the bus lines from GTFS (loaded when the Postgres volume is created)
+SEED_FILE="/app/init/postgres/seed-gtfs-bus.sql.gz"
+if [[ -f "$SEED_FILE" ]]; then
+  echo "NICE! Bus line seed already present — skipping generation."
+  echo "Delete init/postgres/seed-gtfs-bus.sql.gz to force a rebuild."
+else
+  echo "Generating the bus line seed for Postgres from GTFS data..."
+  python3 /app/geodata/gtfs_to_postgres.py --output "$SEED_FILE"
+fi
+
 # Step 4: OSM PBF -> PMTiles (tilemaker runs natively here, no Docker-in-Docker needed)
 if [[ -f "$GEODATA_DIR/denmark.pmtiles" ]]; then
   echo "GOOD! denmark.pmtiles already present — skipping conversion."

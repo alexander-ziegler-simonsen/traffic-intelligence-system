@@ -16,6 +16,8 @@ export interface Theme {
   bus: string
   train: string
   incident: string
+  /** Bus detours around a disruption */
+  diversion: string
   border: string
   busRoute: string
   trainRoute: string
@@ -46,6 +48,7 @@ export const themes: Record<string, Theme> = {
     bus: '#4caf50',
     train: '#2196f3',
     incident: '#ff4444',
+    diversion: '#ffeb3b',
     border: '#4a5568',
     busRoute: '#ff9800',
     trainRoute: '#90caf9',
@@ -74,6 +77,7 @@ export const themes: Record<string, Theme> = {
     bus: '#2e7d32',
     train: '#1565c0',
     incident: '#d32f2f',
+    diversion: '#00838f',
     border: '#888880',
     busRoute: '#e65100',
     trainRoute: '#1565c0',
@@ -102,6 +106,7 @@ export const themes: Record<string, Theme> = {
     bus: '#00c853',
     train: '#0091ea',
     incident: '#ff1744',
+    diversion: '#ffff00',
     border: '#333355',
     busRoute: '#ff6d00',
     trainRoute: '#80d8ff',
@@ -130,6 +135,7 @@ export const themes: Record<string, Theme> = {
     bus: '#39ff14',
     train: '#00cfff',
     incident: '#ff3300',
+    diversion: '#ffff33',
     border: '#00ffaa',
     busRoute: '#ff6600',
     trainRoute: '#88ffff',

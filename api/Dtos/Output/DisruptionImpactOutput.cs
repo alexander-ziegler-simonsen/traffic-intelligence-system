@@ -9,4 +9,7 @@ public partial class DisruptionImpactOutput
     public List<Guid> StopIds { get; set; } = new List<Guid>();
 
     public List<DisruptionImpactSegmentOutput> Segments { get; set; } = new List<DisruptionImpactSegmentOutput>();
+
+    // bus lines that pass a blocked stop or segment, and so get a diversion
+    public List<DisruptionImpactJourneyOutput> Journeys { get; set; } = new List<DisruptionImpactJourneyOutput>();
 }

@@ -24,6 +24,14 @@ window.ResizeObserver ??= class {
   disconnect() {}
 }
 
+// Textarea autosize re-measures when web fonts finish loading
+if (!document.fonts) {
+  Object.defineProperty(document, 'fonts', { value: { addEventListener: () => {}, removeEventListener: () => {} } })
+}
+
+// Select scrolls the highlighted option into view
+Element.prototype.scrollIntoView ??= () => {}
+
 beforeAll(() => server.listen({ onUnhandledFrame: 'error' }))
 
 afterEach(() => {

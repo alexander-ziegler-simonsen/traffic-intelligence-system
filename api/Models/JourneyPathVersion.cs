@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NetTopologySuite.Geometries;
 
 namespace api.Models;
 
@@ -18,6 +19,9 @@ public partial class JourneyPathVersion
     public DateTime? ValidTo { get; set; }
 
     public Guid? FkDisruptionId { get; set; }
+
+    // diversions only: the roads taken around the disruption, one line per detour
+    public MultiLineString? Detour { get; set; }
 
     public DateTime CreatedAt { get; set; }
 

@@ -14,8 +14,23 @@ public static class DisruptionEndpoints
         group.MapPost("/", CreateDisruptionAsync);
         // what a disruption would block, without saving it
         group.MapPost("/impact", GetDisruptionImpactAsync);
+        // works out the bus diversions again, e.g. if Valhalla wasn't running when the disruption was saved
+        group.MapPost("/{id}/reroute", RerouteDisruptionAsync);
         group.MapPut("/{id}", UpdateDisruptionAsync);
         group.MapDelete("/{id}", DeleteDisruptionAsync);
+    }
+
+    private static async Task<IResult> RerouteDisruptionAsync(Guid id, IDiversionService diversionService)
+    {
+        try
+        {
+            var diversions = await diversionService.RerouteAsync(id);
+            return diversions == null ? Results.NotFound() : Results.Ok(diversions);
+        }
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
+        {
+            return Results.Problem("Couldn't reach the Valhalla routing service", statusCode: StatusCodes.Status503ServiceUnavailable);
+        }
     }
 
     private static async Task<IResult> GetAllDisruptionsAsync(IDisruptionService disruptionService)

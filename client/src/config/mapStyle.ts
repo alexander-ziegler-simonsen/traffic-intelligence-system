@@ -73,6 +73,10 @@ export function buildMapStyle(martinUrl: string, t: Theme): maplibregl.StyleSpec
         type: 'geojson',
         data: { type: 'FeatureCollection', features: [] },
       },
+      diversions: {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] },
+      },
     },
     layers: [
       { id: 'background', type: 'background', paint: { 'background-color': t.background } },
@@ -188,6 +192,12 @@ export function buildMapStyle(martinUrl: string, t: Theme): maplibregl.StyleSpec
         id: 'incidents-area-outline', type: 'line', source: 'incidents',
         filter: ['==', ['geometry-type'], 'Polygon'],
         paint: { 'line-color': t.incident, 'line-width': 2, 'line-dasharray': [2, 1.5] },
+      },
+      // Roads buses take around a disruption, under the blocked stops and segments
+      {
+        id: 'diversions-line', type: 'line', source: 'diversions',
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: { 'line-color': t.diversion, 'line-width': 4, 'line-dasharray': [1.5, 1.2] },
       },
       {
         id: 'incidents-segment', type: 'line', source: 'incidents',

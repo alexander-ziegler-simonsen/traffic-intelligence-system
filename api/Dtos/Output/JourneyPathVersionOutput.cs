@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using api.Models;
+using NetTopologySuite.Geometries;
 
 namespace api.Dtos.Output;
 
@@ -20,11 +20,8 @@ public partial class JourneyPathVersionOutput
 
     public Guid? FkDisruptionId { get; set; }
 
+    // diversions only: the roads taken around the disruption, one line per detour
+    public MultiLineString? Detour { get; set; }
+
     public DateTime CreatedAt { get; set; }
-
-    public virtual Disruption? FkDisruption { get; set; }
-
-    public virtual Journey FkJourney { get; set; } = null!;
-
-    public virtual ICollection<JourneyPath> JourneyPaths { get; set; } = new List<JourneyPath>();
 }

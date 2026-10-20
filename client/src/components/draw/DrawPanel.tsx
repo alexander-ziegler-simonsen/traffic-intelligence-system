@@ -78,11 +78,11 @@ export default function DrawPanel({ onDisruptionCreated }: Props) {
     setNotice(null)
   }
 
-  const handleDisruptionCreated = (id: FeatureId, name: string) => {
+  const handleDisruptionCreated = (id: FeatureId, name: string, summary: string | null) => {
     // The map shows it as a disruption from now on, so the drawing isn't needed any more
     deleteFeature(id)
     setDraft(null)
-    setNotice(`${name} is now a disruption`)
+    setNotice(summary ? `${name} is now a disruption · ${summary}` : `${name} is now a disruption`)
     onDisruptionCreated?.()
   }
 
@@ -163,7 +163,7 @@ export default function DrawPanel({ onDisruptionCreated }: Props) {
 
       {draft && (
         <CreateDisruptionModal geometry={draft.feature.geometry} name={draft.name} onClose={() => setDraft(null)}
-          onCreated={() => handleDisruptionCreated(draft.id, draft.name)} />
+          onCreated={(_, summary) => handleDisruptionCreated(draft.id, draft.name, summary)} />
       )}
     </Affix>
   )

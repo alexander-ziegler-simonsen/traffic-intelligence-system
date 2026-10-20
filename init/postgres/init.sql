@@ -17,6 +17,9 @@ CREATE TABLE vehicle (
 
 CREATE TABLE journey (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),
+    -- GTFS route_id
+    route_id    VARCHAR(50),
+    "name"      VARCHAR(50),
     "status"     VARCHAR(20)  NOT NULL,
     direction  VARCHAR(20)  NOT NULL,
     fk_vehicle_type_id  UUID         NOT NULL REFERENCES vehicle_type (id)
@@ -24,10 +27,14 @@ CREATE TABLE journey (
 
 CREATE TABLE "stop" (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),
+    "name"      VARCHAR(200),
     latitude    DOUBLE PRECISION NOT NULL,
     longitude   DOUBLE PRECISION NOT NULL,
     fk_vehicle_type_id  UUID         NOT NULL REFERENCES vehicle_type (id)
 );
+
+-- finds the stops near a disruption's shape without measuring the distance to every stop
+CREATE INDEX stop_position_idx ON "stop" USING GIST (ST_SetSRID(ST_MakePoint(longitude, latitude), 4326));
 
 CREATE TABLE disruption (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),
@@ -63,6 +70,8 @@ CREATE TABLE journey_path_version (
     valid_from  TIMESTAMPTZ  NOT NULL,
     valid_to    TIMESTAMPTZ,
     fk_disruption_id  UUID   REFERENCES disruption (id),
+    -- diversions only: the roads taken around the disruption, one line per detour
+    detour      geometry(MultiLineString, 4326),
     created_at  TIMESTAMPTZ  NOT NULL DEFAULT now(),
     UNIQUE (fk_journey_id, version_no)
 );
@@ -73,6 +82,9 @@ CREATE TABLE journey_path (
     fk_stop_id   UUID         NOT NULL REFERENCES "stop" (id),
     "order" INT NOT NULL
 );
+
+CREATE INDEX journey_path_version_order_idx ON journey_path (fk_journey_path_version_id, "order");
+CREATE INDEX journey_path_stop_idx ON journey_path (fk_stop_id);
 
 CREATE TABLE journey_path_time_plan (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),

@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import { Alert, Button, Group, Loader, Modal, Select, Stack, Text, TextInput, Textarea } from '@mantine/core'
 import type { Geometry } from 'geojson'
 import { disruptionService } from '../../services/disruptionService'
-import type { Disruption, DisruptionImpact, NewEntity } from '../../types/api'
+import { diversionService } from '../../services/diversionService'
+import type { Disruption, DisruptionImpact, Guid, NewEntity } from '../../types/api'
 
 const CAUSES = [
   { value: 'roadwork', label: 'Roadwork' },
@@ -14,6 +15,9 @@ const CAUSES = [
 
 // Wait for the user to stop editing the times before asking the API again
 const IMPACT_DELAY_MS = 300
+
+// How many bus line names to list before "and N more"
+const MAX_LINES_LISTED = 12
 
 type ImpactState =
   | { status: 'loading' }
@@ -33,12 +37,40 @@ function describeImpact({ stopIds, segments }: DisruptionImpact) {
   return `Blocks ${plural(stopIds.length, 'stop')} and ${plural(segments.length, 'route segment')}.`
 }
 
+/** Line names without the per-direction duplicates, in the order people expect: 5C, 6A, 14, 150S */
+function lineNames(lines: { name: string | null }[]) {
+  return [...new Set(lines.flatMap(line => line.name ?? []))].sort((a, b) => a.localeCompare(b, 'da', { numeric: true }))
+}
+
+function describeLines(names: string[]) {
+  const listed = names.slice(0, MAX_LINES_LISTED).join(', ')
+  const more = names.length > MAX_LINES_LISTED ? ` and ${names.length - MAX_LINES_LISTED} more` : ''
+  return `Reroutes ${plural(names.length, 'bus line')}: ${listed}${more}.`
+}
+
+/**
+ * How the rerouting went, for the confirmation. The API reroutes while saving, but can't when
+ * Valhalla isn't running. `expected` are the lines the preview said would be rerouted, if it loaded
+ */
+async function rerouteSummary(disruptionId: Guid, expected: string[] | null) {
+  try {
+    const rerouted = lineNames((await diversionService.getAll()).filter(d => d.fkDisruptionId === disruptionId))
+    if (expected && rerouted.length < expected.length) {
+      return rerouted.length === 0 ? "its bus lines couldn't be rerouted" : `${rerouted.length} of ${expected.length} bus lines rerouted`
+    }
+    return rerouted.length > 0 ? `${plural(rerouted.length, 'bus line')} rerouted` : null
+  } catch {
+    return null
+  }
+}
+
 interface Props {
   geometry: Geometry
   /** Shape name shown in the title, e.g. "Polygon 2" */
   name: string
   onClose: () => void
-  onCreated: (disruption: Disruption) => void
+  /** `summary` says how many bus lines were rerouted, e.g. "4 bus lines rerouted" */
+  onCreated: (disruption: Disruption, summary: string | null) => void
 }
 
 export default function CreateDisruptionModal({ geometry, name, onClose, onCreated }: Props) {
@@ -88,8 +120,10 @@ export default function CreateDisruptionModal({ geometry, name, onClose, onCreat
     setSaving(true)
     setError(null)
     try {
-      // The API saves the blocked stops and segments along with it
-      onCreated(await disruptionService.create(input))
+      // The API saves the blocked stops and segments along with it, and reroutes the bus lines
+      const created = await disruptionService.create(input)
+      const expected = impact.status === 'done' ? lineNames(impact.impact.journeys) : null
+      onCreated(created, await rerouteSummary(created.id, expected))
     } catch {
       setError("Couldn't save the disruption. Is the API running?")
       setSaving(false)
@@ -112,13 +146,19 @@ export default function CreateDisruptionModal({ geometry, name, onClose, onCreat
             {!timesValid ? null
               : impact.status === 'loading' ? <><Loader size={14} /><Text size="sm" c="dimmed">Checking which stops it blocks…</Text></>
               : impact.status === 'error' ? <Text size="sm" c="dimmed">Couldn't check which stops it blocks.</Text>
-              : <Text size="sm">{describeImpact(impact.impact)}</Text>}
+              : (
+                <Stack gap={2}>
+                  <Text size="sm">{describeImpact(impact.impact)}</Text>
+                  {impact.impact.journeys.length > 0 && <Text size="sm" c="dimmed">{describeLines(lineNames(impact.impact.journeys))}</Text>}
+                </Stack>
+              )}
           </Group>
 
           {error && <Alert color="red" variant="light" py="xs">{error}</Alert>}
 
           <Group justify="flex-end" gap={8} mt={4}>
             <Button variant="default" onClick={onClose} disabled={saving}>Cancel</Button>
+            {/* Saving also reroutes the bus lines, which can take a few seconds for a big area */}
             <Button type="submit" loading={saving} disabled={!cause || !timesValid}>Create disruption</Button>
           </Group>
         </Stack>

@@ -4,6 +4,7 @@ import type {
   DisruptionImpact,
   DisruptionSegment,
   DisruptionStop,
+  Diversion,
   NewEntity,
   Stop,
   UsingJourney,
@@ -40,10 +41,10 @@ export const vehicles: Vehicle[] = [
 ]
 
 export const stops: Stop[] = [
-  { id: STOP_RADHUSPLADSEN, latitude: 55.6761, longitude: 12.5683, fkVehicleTypeId: BUS_TYPE },
-  { id: STOP_HOVEDBANEGARD, latitude: 55.6727, longitude: 12.5650, fkVehicleTypeId: TRAIN_TYPE },
-  { id: STOP_NORREPORT, latitude: 55.6833, longitude: 12.5714, fkVehicleTypeId: BUS_TYPE },
-  { id: STOP_NYHAVN, latitude: 55.6798, longitude: 12.5902, fkVehicleTypeId: BUS_TYPE },
+  { id: STOP_RADHUSPLADSEN, name: 'Rådhuspladsen St.', latitude: 55.6761, longitude: 12.5683, fkVehicleTypeId: BUS_TYPE },
+  { id: STOP_HOVEDBANEGARD, name: 'København H', latitude: 55.6727, longitude: 12.5650, fkVehicleTypeId: TRAIN_TYPE },
+  { id: STOP_NORREPORT, name: 'Nørreport St.', latitude: 55.6833, longitude: 12.5714, fkVehicleTypeId: BUS_TYPE },
+  { id: STOP_NYHAVN, name: 'Nyhavn', latitude: 55.6798, longitude: 12.5902, fkVehicleTypeId: BUS_TYPE },
 ]
 
 export const usingJourneys: UsingJourney[] = [
@@ -88,6 +89,22 @@ export const disruptionSegments: DisruptionSegment[] = [
   { id: '0195adad-0000-7000-8000-000000000001', fkDisruptionId: ROADWORK, fkFromStopId: STOP_NORREPORT, fkToStopId: STOP_NYHAVN },
 ]
 
+// The 5C drives around the roadwork from Rådhuspladsen to Nyhavn, skipping Nørreport
+export const diversions: Diversion[] = [
+  {
+    id: '0195aeae-0000-7000-8000-000000000001',
+    fkJourneyId: '0195dddd-0000-7000-8000-000000000001',
+    fkDisruptionId: ROADWORK,
+    routeId: '1500_3',
+    name: '5C',
+    direction: 'outbound',
+    validFrom: '2026-01-01T00:00:00Z',
+    validTo: null,
+    detour: { type: 'MultiLineString', coordinates: [[[12.5683, 55.6761], [12.5760, 55.6772], [12.5845, 55.6785], [12.5902, 55.6798]]] },
+    skippedStopIds: [STOP_NORREPORT],
+  },
+]
+
 const collections: Record<string, unknown[]> = {
   'vehicle-types': vehicleTypes,
   'vehicles': vehicles,
@@ -96,6 +113,7 @@ const collections: Record<string, unknown[]> = {
   'using-journey-logs': usingJourneyLogs,
   'disruption-stops': disruptionStops,
   'disruption-segments': disruptionSegments,
+  'diversions': diversions,
 }
 
 // Disruptions created while running `pnpm dev:mock`, kept apart so the fixtures above stay as the tests expect
@@ -116,6 +134,6 @@ export const handlers = [
     return HttpResponse.json(created, { status: 201 })
   }),
 
-  // The real API finds blocked stops with PostGIS; without it nothing is ever blocked
-  http.post('*/disruptions/impact', () => HttpResponse.json<DisruptionImpact>({ stopIds: [], segments: [] })),
+  // The real API finds blocked stops with PostGIS and reroutes buses with Valhalla; without them nothing is ever blocked
+  http.post('*/disruptions/impact', () => HttpResponse.json<DisruptionImpact>({ stopIds: [], segments: [], journeys: [] })),
 ]

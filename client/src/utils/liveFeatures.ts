@@ -3,6 +3,7 @@ import type {
   Disruption,
   DisruptionSegment,
   DisruptionStop,
+  Diversion,
   Guid,
   Stop,
   UsingJourney,
@@ -64,9 +65,9 @@ export interface DisruptionData {
   stops: Stop[]
 }
 
-export function isActive(disruption: Disruption, now: number) {
-  return Date.parse(disruption.validFrom) <= now
-    && (disruption.validTo === null || Date.parse(disruption.validTo) > now)
+/** Whether a disruption or diversion is in effect at `now` */
+export function isActive({ validFrom, validTo }: Pick<Disruption, 'validFrom' | 'validTo'>, now: number) {
+  return Date.parse(validFrom) <= now && (validTo === null || Date.parse(validTo) > now)
 }
 
 /**
@@ -106,4 +107,35 @@ export function disruptionFeatures(
   })
 
   return collection([...shapes, ...lines, ...points])
+}
+
+export interface DiversionData {
+  diversions: Diversion[]
+  stops: Stop[]
+}
+
+/**
+ * Detours of the diversions in effect at `now`, one line per detour. A line that starts or ends inside
+ * the disruption is only shortened, so it has no detour to draw. `skipped` names the stops it leaves out.
+ */
+export function diversionFeatures({ diversions, stops }: DiversionData, now = Date.now()): FeatureCollection {
+  const stopById = new Map(stops.map(s => [s.id, s]))
+
+  return collection(diversions.filter(d => isActive(d, now)).flatMap<Feature>(diversion => {
+    if (!diversion.detour) return []
+    const skipped = diversion.skippedStopIds.flatMap(id => stopById.get(id)?.name ?? [])
+    return diversion.detour.coordinates.map<Feature>(coordinates => ({
+      type: 'Feature',
+      geometry: { type: 'LineString', coordinates },
+      properties: {
+        diversion_id: diversion.id,
+        disruption_id: diversion.fkDisruptionId,
+        route_id: diversion.routeId,
+        name: diversion.name,
+        direction: diversion.direction,
+        // map feature properties can't hold arrays
+        skipped: skipped.join('; '),
+      },
+    }))
+  }))
 }

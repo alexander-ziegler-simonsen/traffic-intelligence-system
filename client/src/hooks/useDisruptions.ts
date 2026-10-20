@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { FeatureCollection } from 'geojson'
 import { disruptionSegmentService, disruptionService, disruptionStopService } from '../services/disruptionService'
-import { stopService } from '../services/stopService'
+import { getStops } from '../services/stopCache'
 import { disruptionFeatures } from '../utils/liveFeatures'
 
 const EMPTY: FeatureCollection = { type: 'FeatureCollection', features: [] }
@@ -18,13 +18,16 @@ export function useDisruptions(intervalMs = 10000, reloadKey = 0) {
 
     async function poll() {
       try {
-        const [disruptions, disruptionStops, disruptionSegments, stops] = await Promise.all([
+        const [disruptions, disruptionStops, disruptionSegments] = await Promise.all([
           disruptionService.getAll(),
           disruptionStopService.getAll(),
           disruptionSegmentService.getAll(),
-          stopService.getAll(),
         ])
-        if (active) setData(disruptionFeatures({ disruptions, disruptionStops, disruptionSegments, stops }))
+        const stops = await getStops([
+          ...disruptionStops.map(s => s.fkStopId),
+          ...disruptionSegments.flatMap(s => [s.fkFromStopId, s.fkToStopId]),
+        ])
+        if (active) setData(disruptionFeatures({ disruptions, disruptionStops, disruptionSegments, stops: [...stops.values()] }))
       } catch {
         // API not available yet
       }

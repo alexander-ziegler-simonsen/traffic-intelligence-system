@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using api.Models;
 
 namespace api.Dtos.Output;
 
@@ -8,15 +7,15 @@ public partial class JourneyOutput
 {
     public Guid Id { get; set; }
 
+    // GTFS route_id, the same id the route lines on the map carry
+    public string? RouteId { get; set; }
+
+    // line name shown to passengers, e.g. "5C"
+    public string? Name { get; set; }
+
     public string Status { get; set; } = null!;
 
     public string Direction { get; set; } = null!;
 
     public Guid FkVehicleTypeId { get; set; }
-
-    public virtual VehicleType FkVehicleType { get; set; } = null!;
-
-    public virtual ICollection<JourneyPathVersion> JourneyPathVersions { get; set; } = new List<JourneyPathVersion>();
-
-    public virtual ICollection<UsingJourney> UsingJourneys { get; set; } = new List<UsingJourney>();
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { FeatureCollection } from 'geojson'
 import { vehicleService, vehicleTypeService } from '../services/vehicleService'
-import { stopService } from '../services/stopService'
+import { getStops } from '../services/stopCache'
 import { usingJourneyLogService, usingJourneyService } from '../services/journeyService'
 import { vehicleFeatures } from '../utils/liveFeatures'
 
@@ -16,14 +16,14 @@ export function useVehicles(intervalMs = 5000) {
 
         async function poll() {
             try {
-                const [vehicles, vehicleTypes, stops, usingJourneys, usingJourneyLogs] = await Promise.all([
+                const [vehicles, vehicleTypes, usingJourneys, usingJourneyLogs] = await Promise.all([
                     vehicleService.getAll(),
                     vehicleTypeService.getAll(),
-                    stopService.getAll(),
                     usingJourneyService.getAll(),
                     usingJourneyLogService.getAll(),
                 ])
-                if (active) setData(vehicleFeatures({ vehicles, vehicleTypes, stops, usingJourneys, usingJourneyLogs }))
+                const stops = await getStops(usingJourneyLogs.map(log => log.fkStopId))
+                if (active) setData(vehicleFeatures({ vehicles, vehicleTypes, stops: [...stops.values()], usingJourneys, usingJourneyLogs }))
             } catch {
                 // API not available yet
             }

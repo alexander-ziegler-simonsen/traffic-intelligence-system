@@ -56,9 +56,19 @@ const CITIES = [
   { label: 'Køge', center: [12.18, 55.46] as [number, number], zoom: 12 },
 ]
 
+// Lines that share a detour are drawn on top of each other, so the tooltip names all of them
+function diversionTooltip(features: maplibregl.MapGeoJSONFeature[]) {
+  const unique = (values: string[]) => [...new Set(values.filter(Boolean))]
+  const names = unique(features.map(f => String(f.properties?.name ?? ''))).sort((a, b) => a.localeCompare(b, 'da', { numeric: true }))
+  const skipped = unique(features.flatMap(f => String(f.properties?.skipped ?? '').split('; ')))
+  return `Diverted: ${names.join(', ')}${skipped.length ? ` — skips ${skipped.join(', ')}` : ''}`
+}
+
 interface Props {
   vehicles: FeatureCollection
   incidents: FeatureCollection
+  /** Detours of bus lines driving around disruptions */
+  diversions: FeatureCollection
   disabledRoutes: Set<string>
   /** Turn off hover tooltips while another tool (e.g. drawing) owns the pointer and cursor */
   hoverEnabled?: boolean
@@ -72,7 +82,7 @@ const ROUTE_LAYERS = [
   'gtfs-light-rail-routes',
 ] as const
 
-export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled = true }: Props) {
+export default function Map({ vehicles, incidents, diversions, disabledRoutes, hoverEnabled = true }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
   const loadedRef = useRef(false)
@@ -110,7 +120,7 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
 
       const STOP_LAYERS = ['bus-stops', 'train-stations'] as const
 
-      // Single mousemove handler with priority: vehicle > route > stop > road name
+      // Single mousemove handler with priority: vehicle > diversion > route > stop > road name
       map.on('mousemove', (e) => {
         if (!hoverEnabledRef.current) {
           setTooltip(null)
@@ -123,6 +133,13 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
           const label = type === 'train' ? 'Train' : 'Bus'
           map.getCanvas().style.cursor = 'pointer'
           setTooltip(vehicle_number ? `${label} ${vehicle_number}` : label)
+          return
+        }
+
+        const diversionFeats = map.queryRenderedFeatures(e.point, { layers: ['diversions-line'] })
+        if (diversionFeats.length) {
+          map.getCanvas().style.cursor = 'pointer'
+          setTooltip(diversionTooltip(diversionFeats))
           return
         }
 
@@ -202,6 +219,7 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
     map.setPaintProperty('incidents-segment', 'line-color', theme.incident)
     map.setPaintProperty('incidents-halo', 'circle-color', theme.incident)
     map.setPaintProperty('incidents-dot', 'circle-color', theme.incident)
+    map.setPaintProperty('diversions-line', 'line-color', theme.diversion)
     map.setPaintProperty('gtfs-bus-routes', 'line-color', theme.busRoute)
     map.setPaintProperty('gtfs-train-routes', 'line-color', theme.trainRoute)
     map.setPaintProperty('gtfs-metro-routes', 'line-color', theme.metroRoute)
@@ -226,6 +244,7 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
     map.setLayoutProperty('incidents-segment', 'visibility', v(settings.showIncidents))
     map.setLayoutProperty('incidents-halo', 'visibility', v(settings.showIncidents))
     map.setLayoutProperty('incidents-dot', 'visibility', v(settings.showIncidents))
+    map.setLayoutProperty('diversions-line', 'visibility', v(settings.showIncidents))
     map.setLayoutProperty('gtfs-bus-routes', 'visibility', v(settings.showBusRoutes))
     map.setLayoutProperty('gtfs-train-routes', 'visibility', v(settings.showTrainRoutes))
     map.setLayoutProperty('gtfs-metro-routes', 'visibility', v(settings.showMetroRoutes))
@@ -277,6 +296,11 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
     const src = mapRef.current?.getSource('incidents') as maplibregl.GeoJSONSource | undefined
     src?.setData(incidents)
   }, [incidents])
+
+  useEffect(() => {
+    const src = mapRef.current?.getSource('diversions') as maplibregl.GeoJSONSource | undefined
+    src?.setData(diversions)
+  }, [diversions])
 
   function flyToCity(center: [number, number], zoom: number) {
     mapRef.current?.flyTo({ center, zoom, duration: 1200 })

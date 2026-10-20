@@ -134,6 +134,12 @@ public partial class TisDbContext : DbContext
                 .HasMaxLength(20)
                 .HasColumnName("direction");
             entity.Property(e => e.FkVehicleTypeId).HasColumnName("fk_vehicle_type_id");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .HasColumnName("name");
+            entity.Property(e => e.RouteId)
+                .HasMaxLength(50)
+                .HasColumnName("route_id");
             entity.Property(e => e.Status)
                 .HasMaxLength(20)
                 .HasColumnName("status");
@@ -149,6 +155,10 @@ public partial class TisDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("journey_path_pkey");
 
             entity.ToTable("journey_path");
+
+            entity.HasIndex(e => e.FkStopId, "journey_path_stop_idx");
+
+            entity.HasIndex(e => new { e.FkJourneyPathVersionId, e.Order }, "journey_path_version_order_idx");
 
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("uuidv7()")
@@ -202,6 +212,9 @@ public partial class TisDbContext : DbContext
                 .HasColumnName("created_at");
             entity.Property(e => e.FkDisruptionId).HasColumnName("fk_disruption_id");
             entity.Property(e => e.FkJourneyId).HasColumnName("fk_journey_id");
+            entity.Property(e => e.Detour)
+                .HasColumnType("geometry(MultiLineString,4326)")
+                .HasColumnName("detour");
             entity.Property(e => e.Kind)
                 .HasMaxLength(20)
                 .HasColumnName("kind");
@@ -231,6 +244,9 @@ public partial class TisDbContext : DbContext
             entity.Property(e => e.FkVehicleTypeId).HasColumnName("fk_vehicle_type_id");
             entity.Property(e => e.Latitude).HasColumnName("latitude");
             entity.Property(e => e.Longitude).HasColumnName("longitude");
+            entity.Property(e => e.Name)
+                .HasMaxLength(200)
+                .HasColumnName("name");
 
             entity.HasOne(d => d.FkVehicleType).WithMany(p => p.Stops)
                 .HasForeignKey(d => d.FkVehicleTypeId)

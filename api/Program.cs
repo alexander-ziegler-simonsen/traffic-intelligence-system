@@ -28,6 +28,13 @@ var clientOrigins = builder.Configuration.GetSection("Cors:ClientOrigins").Get<s
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
     policy.WithOrigins(clientOrigins).AllowAnyHeader().AllowAnyMethod()));
 
+// road routing for bus diversions (the valhalla compose service)
+builder.Services.AddHttpClient<ValhallaClient>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["Valhalla:Url"] ?? "http://localhost:8002/");
+    client.Timeout = TimeSpan.FromSeconds(15);
+});
+
 // mapper
 builder.Services.AddSingleton<StopMapper>();
 builder.Services.AddSingleton<VehicleTypeMapper>();
@@ -55,6 +62,7 @@ builder.Services.AddScoped<IDisruptionService, DisruptionService>();
 builder.Services.AddScoped<IDisruptionStopService, DisruptionStopService>();
 builder.Services.AddScoped<IDisruptionSegmentService, DisruptionSegmentService>();
 builder.Services.AddScoped<IJourneyPathVersionService, JourneyPathVersionService>();
+builder.Services.AddScoped<IDiversionService, DiversionService>();
 
 var app = builder.Build();
 
@@ -81,5 +89,6 @@ app.MapDisruptionEndpoints();
 app.MapDisruptionStopEndpoints();
 app.MapDisruptionSegmentEndpoints();
 app.MapJourneyPathVersionEndpoints();
+app.MapDiversionEndpoints();
 
 app.Run();

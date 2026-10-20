@@ -17,6 +17,13 @@ geodata/train-routes.pmtiles
 geodata/bus-routes.pmtiles
 geodata/bus-stops.pmtiles
 
+# Generated from geodata/GTFS by geodata/gtfs_to_postgres.py (setup step 3b)
+init/postgres/seed-gtfs-bus.sql.gz
+
+# Python bytecode 
+__pycache__/
+*.py[cod]
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,dotnetcore,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,dotnetcore,macos,windows
