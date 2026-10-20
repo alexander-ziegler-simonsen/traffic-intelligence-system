@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using api.data;
 using api.Endpoints;
-using api.Interfaces;
+using api.Services.Interfaces;
 using api.Services;
 using api.Mapping;
 
@@ -26,8 +26,14 @@ builder.Services.AddSingleton<UsingJourneyMapper>();
 builder.Services.AddSingleton<UsingJourneyLogMapper>();
 
 // services
+builder.Services.AddScoped<IVehicleTypeService, VehicleTypeService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<IStopService, StopService>();
 builder.Services.AddScoped<IJourneyService, JourneyService>();
+builder.Services.AddScoped<IJourneyPathService, JourneyPathService>();
+builder.Services.AddScoped<IJourneyPathTimePlanService, JourneyPathTimePlanService>();
+builder.Services.AddScoped<IUsingJourneyService, UsingJourneyService>();
+builder.Services.AddScoped<IUsingJourneyLogService, UsingJourneyLogService>();
 
 var app = builder.Build();
 
@@ -40,6 +46,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapVehicleTypeEndpoints();
+app.MapVehicleEndpoints();
+app.MapStopEndpoints();
 app.MapJourneyEndpoints();
+app.MapJourneyPathEndpoints();
+app.MapJourneyPathTimePlanEndpoints();
+app.MapUsingJourneyEndpoints();
+app.MapUsingJourneyLogEndpoints();
 
 app.Run();

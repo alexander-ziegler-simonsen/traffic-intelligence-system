@@ -1,4 +1,4 @@
-using api.Interfaces;
+using api.Services.Interfaces;
 using api.Dtos.Input;
 
 namespace api.Endpoints;

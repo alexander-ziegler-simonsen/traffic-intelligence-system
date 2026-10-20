@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using api.data;
-using api.Interfaces;
 using api.Mapping;
 using api.Models;
 using api.Dtos.Input;
 using api.Dtos.Output;
+using api.Services.Interfaces;
 
 namespace api.Services;
 
