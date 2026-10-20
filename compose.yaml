@@ -65,11 +65,37 @@ services:
       - ./geodata/bus-stops.pmtiles:/data/gtfs/bus-stops.pmtiles:ro
       - ./martin/config.yaml:/config/martin.yaml:ro
 
+  valhalla:
+    image: ghcr.io/valhalla/valhalla-scripted:3.9.1
+    container_name: tis-valhalla
+    restart: unless-stopped
+    environment:
+      use_tiles_ignore_pbf: "True"
+      serve_tiles: "True"
+      server_threads: "2"
+      build_admins: "False"
+      build_time_zones: "False"
+      build_elevation: "False"
+    ports:
+      - "${VALHALLA_PORT:-8002}:8002"
+    volumes:
+      - valhalla_data:/custom_files
+      - ./geodata/denmark-latest.osm.pbf:/custom_files/denmark-latest.osm.pbf
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:8002/status"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15m
+    networks:
+      - internal
+
 # Volumes & Networks
 
 volumes:
   postgres_data:
   redis_data:
+  valhalla_data:
 
 networks:
   internal:
