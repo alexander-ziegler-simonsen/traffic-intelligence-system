@@ -33,10 +33,14 @@ CREATE TABLE disruption (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),
     cause       VARCHAR(50)  NOT NULL,
     "description" TEXT,
+    -- shape drawn on the map
+    "geometry"  geometry(Geometry, 4326),
     valid_from  TIMESTAMPTZ  NOT NULL,
     valid_to    TIMESTAMPTZ,
     created_at  TIMESTAMPTZ  NOT NULL DEFAULT now()
 );
+
+CREATE INDEX disruption_geometry_idx ON disruption USING GIST ("geometry");
 
 CREATE TABLE disruption_stop (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),
