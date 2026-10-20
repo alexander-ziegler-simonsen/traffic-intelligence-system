@@ -67,6 +67,7 @@ services:
 
   valhalla:
     image: ghcr.io/valhalla/valhalla-scripted:3.9.1
+    platform: linux/amd64
     container_name: tis-valhalla
     restart: unless-stopped
     environment:

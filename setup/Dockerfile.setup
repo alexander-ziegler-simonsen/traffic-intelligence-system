@@ -1,9 +1,7 @@
 # Dockerfile.setup — builds a self-contained setup image with all required tools.
 # tilemaker and tippecanoe are compiled from source, so no host installs are needed.
-#
 # Build:
 #   docker build -f setup/Dockerfile.setup -t traffic-setup .
-#
 # Run:
 #   docker run --rm -v "$(pwd):/app" traffic-setup     # bash / zsh
 #   docker run --rm -v "${PWD}:/app" traffic-setup     # PowerShell
@@ -53,7 +51,7 @@ WORKDIR /tmp/tippecanoe
 RUN git clone --depth 1 https://github.com/felt/tippecanoe.git .
 RUN make -j"$(nproc)" && strip tippecanoe
 
-# Final image: only the built binaries and their runtime deps
+# Final image, with : only the built binaries and their runtime deps
 FROM ${BASE_IMAGE}
 
 RUN apt-get update \
