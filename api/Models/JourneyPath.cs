@@ -7,13 +7,13 @@ public partial class JourneyPath
 {
     public Guid Id { get; set; }
 
-    public Guid FkJourneyId { get; set; }
+    public Guid FkJourneyPathVersionId { get; set; }
 
     public Guid FkStopId { get; set; }
 
     public int Order { get; set; }
 
-    public virtual Journey FkJourney { get; set; } = null!;
+    public virtual JourneyPathVersion FkJourneyPathVersion { get; set; } = null!;
 
     public virtual Stop FkStop { get; set; } = null!;
 

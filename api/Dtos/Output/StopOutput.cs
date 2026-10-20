@@ -16,6 +16,12 @@ public partial class StopOutput
 
     public virtual VehicleType FkVehicleType { get; set; } = null!;
 
+    public virtual ICollection<DisruptionSegment> DisruptionSegmentFkFromStops { get; set; } = new List<DisruptionSegment>();
+
+    public virtual ICollection<DisruptionSegment> DisruptionSegmentFkToStops { get; set; } = new List<DisruptionSegment>();
+
+    public virtual ICollection<DisruptionStop> DisruptionStops { get; set; } = new List<DisruptionStop>();
+
     public virtual ICollection<JourneyPath> JourneyPaths { get; set; } = new List<JourneyPath>();
 
     public virtual ICollection<UsingJourneyLog> UsingJourneyLogs { get; set; } = new List<UsingJourneyLog>();

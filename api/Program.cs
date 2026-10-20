@@ -24,6 +24,10 @@ builder.Services.AddSingleton<JourneyPathTimePlanMapper>();
 builder.Services.AddSingleton<JourneyPathMapper>();
 builder.Services.AddSingleton<UsingJourneyMapper>();
 builder.Services.AddSingleton<UsingJourneyLogMapper>();
+builder.Services.AddSingleton<DisruptionMapper>();
+builder.Services.AddSingleton<DisruptionStopMapper>();
+builder.Services.AddSingleton<DisruptionSegmentMapper>();
+builder.Services.AddSingleton<JourneyPathVersionMapper>();
 
 // services
 builder.Services.AddScoped<IVehicleTypeService, VehicleTypeService>();
@@ -34,6 +38,10 @@ builder.Services.AddScoped<IJourneyPathService, JourneyPathService>();
 builder.Services.AddScoped<IJourneyPathTimePlanService, JourneyPathTimePlanService>();
 builder.Services.AddScoped<IUsingJourneyService, UsingJourneyService>();
 builder.Services.AddScoped<IUsingJourneyLogService, UsingJourneyLogService>();
+builder.Services.AddScoped<IDisruptionService, DisruptionService>();
+builder.Services.AddScoped<IDisruptionStopService, DisruptionStopService>();
+builder.Services.AddScoped<IDisruptionSegmentService, DisruptionSegmentService>();
+builder.Services.AddScoped<IJourneyPathVersionService, JourneyPathVersionService>();
 
 var app = builder.Build();
 
@@ -54,5 +62,9 @@ app.MapJourneyPathEndpoints();
 app.MapJourneyPathTimePlanEndpoints();
 app.MapUsingJourneyEndpoints();
 app.MapUsingJourneyLogEndpoints();
+app.MapDisruptionEndpoints();
+app.MapDisruptionStopEndpoints();
+app.MapDisruptionSegmentEndpoints();
+app.MapJourneyPathVersionEndpoints();
 
 app.Run();

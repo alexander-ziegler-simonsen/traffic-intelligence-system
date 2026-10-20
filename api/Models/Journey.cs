@@ -15,7 +15,7 @@ public partial class Journey
 
     public virtual VehicleType FkVehicleType { get; set; } = null!;
 
-    public virtual ICollection<JourneyPath> JourneyPaths { get; set; } = new List<JourneyPath>();
+    public virtual ICollection<JourneyPathVersion> JourneyPathVersions { get; set; } = new List<JourneyPathVersion>();
 
     public virtual ICollection<UsingJourney> UsingJourneys { get; set; } = new List<UsingJourney>();
 }

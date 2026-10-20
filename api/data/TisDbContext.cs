@@ -16,11 +16,19 @@ public partial class TisDbContext : DbContext
     {
     }
 
+    public virtual DbSet<Disruption> Disruptions { get; set; }
+
+    public virtual DbSet<DisruptionSegment> DisruptionSegments { get; set; }
+
+    public virtual DbSet<DisruptionStop> DisruptionStops { get; set; }
+
     public virtual DbSet<Journey> Journeys { get; set; }
 
     public virtual DbSet<JourneyPath> JourneyPaths { get; set; }
 
     public virtual DbSet<JourneyPathTimePlan> JourneyPathTimePlans { get; set; }
+
+    public virtual DbSet<JourneyPathVersion> JourneyPathVersions { get; set; }
 
     public virtual DbSet<Stop> Stops { get; set; }
 
@@ -34,6 +42,78 @@ public partial class TisDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Disruption>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("disruption_pkey");
+
+            entity.ToTable("disruption");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("uuidv7()")
+                .HasColumnName("id");
+            entity.Property(e => e.Cause)
+                .HasMaxLength(50)
+                .HasColumnName("cause");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("now()")
+                .HasColumnName("created_at");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.ValidFrom).HasColumnName("valid_from");
+            entity.Property(e => e.ValidTo).HasColumnName("valid_to");
+        });
+
+        modelBuilder.Entity<DisruptionSegment>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("disruption_segment_pkey");
+
+            entity.ToTable("disruption_segment");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("uuidv7()")
+                .HasColumnName("id");
+            entity.Property(e => e.FkDisruptionId).HasColumnName("fk_disruption_id");
+            entity.Property(e => e.FkFromStopId).HasColumnName("fk_from_stop_id");
+            entity.Property(e => e.FkToStopId).HasColumnName("fk_to_stop_id");
+
+            entity.HasOne(d => d.FkDisruption).WithMany(p => p.DisruptionSegments)
+                .HasForeignKey(d => d.FkDisruptionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("disruption_segment_fk_disruption_id_fkey");
+
+            entity.HasOne(d => d.FkFromStop).WithMany(p => p.DisruptionSegmentFkFromStops)
+                .HasForeignKey(d => d.FkFromStopId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("disruption_segment_fk_from_stop_id_fkey");
+
+            entity.HasOne(d => d.FkToStop).WithMany(p => p.DisruptionSegmentFkToStops)
+                .HasForeignKey(d => d.FkToStopId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("disruption_segment_fk_to_stop_id_fkey");
+        });
+
+        modelBuilder.Entity<DisruptionStop>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("disruption_stop_pkey");
+
+            entity.ToTable("disruption_stop");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("uuidv7()")
+                .HasColumnName("id");
+            entity.Property(e => e.FkDisruptionId).HasColumnName("fk_disruption_id");
+            entity.Property(e => e.FkStopId).HasColumnName("fk_stop_id");
+
+            entity.HasOne(d => d.FkDisruption).WithMany(p => p.DisruptionStops)
+                .HasForeignKey(d => d.FkDisruptionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("disruption_stop_fk_disruption_id_fkey");
+
+            entity.HasOne(d => d.FkStop).WithMany(p => p.DisruptionStops)
+                .HasForeignKey(d => d.FkStopId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("disruption_stop_fk_stop_id_fkey");
+        });
+
         modelBuilder.Entity<Journey>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("journey_pkey");
@@ -66,14 +146,14 @@ public partial class TisDbContext : DbContext
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("uuidv7()")
                 .HasColumnName("id");
-            entity.Property(e => e.FkJourneyId).HasColumnName("fk_journey_id");
+            entity.Property(e => e.FkJourneyPathVersionId).HasColumnName("fk_journey_path_version_id");
             entity.Property(e => e.FkStopId).HasColumnName("fk_stop_id");
             entity.Property(e => e.Order).HasColumnName("order");
 
-            entity.HasOne(d => d.FkJourney).WithMany(p => p.JourneyPaths)
-                .HasForeignKey(d => d.FkJourneyId)
+            entity.HasOne(d => d.FkJourneyPathVersion).WithMany(p => p.JourneyPaths)
+                .HasForeignKey(d => d.FkJourneyPathVersionId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("journey_path_fk_journey_id_fkey");
+                .HasConstraintName("journey_path_fk_journey_path_version_id_fkey");
 
             entity.HasOne(d => d.FkStop).WithMany(p => p.JourneyPaths)
                 .HasForeignKey(d => d.FkStopId)
@@ -97,6 +177,39 @@ public partial class TisDbContext : DbContext
                 .HasForeignKey(d => d.FkJourneyPathId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("journey_path_time_plan_fk_journey_path_id_fkey");
+        });
+
+        modelBuilder.Entity<JourneyPathVersion>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("journey_path_version_pkey");
+
+            entity.ToTable("journey_path_version");
+
+            entity.HasIndex(e => new { e.FkJourneyId, e.VersionNo }, "journey_path_version_fk_journey_id_version_no_key").IsUnique();
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("uuidv7()")
+                .HasColumnName("id");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("now()")
+                .HasColumnName("created_at");
+            entity.Property(e => e.FkDisruptionId).HasColumnName("fk_disruption_id");
+            entity.Property(e => e.FkJourneyId).HasColumnName("fk_journey_id");
+            entity.Property(e => e.Kind)
+                .HasMaxLength(20)
+                .HasColumnName("kind");
+            entity.Property(e => e.ValidFrom).HasColumnName("valid_from");
+            entity.Property(e => e.ValidTo).HasColumnName("valid_to");
+            entity.Property(e => e.VersionNo).HasColumnName("version_no");
+
+            entity.HasOne(d => d.FkDisruption).WithMany(p => p.JourneyPathVersions)
+                .HasForeignKey(d => d.FkDisruptionId)
+                .HasConstraintName("journey_path_version_fk_disruption_id_fkey");
+
+            entity.HasOne(d => d.FkJourney).WithMany(p => p.JourneyPathVersions)
+                .HasForeignKey(d => d.FkJourneyId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("journey_path_version_fk_journey_id_fkey");
         });
 
         modelBuilder.Entity<Stop>(entity =>
