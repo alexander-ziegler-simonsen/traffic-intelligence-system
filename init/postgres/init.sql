@@ -1,3 +1,9 @@
+-- extensions
+
+CREATE EXTENSION IF NOT EXISTS postgis;
+
+-- schema
+
 CREATE TABLE vehicle_type (
     id          UUID         PRIMARY KEY DEFAULT uuidv7(),
     "name"        VARCHAR(100) NOT NULL
