@@ -179,11 +179,19 @@ export function buildMapStyle(martinUrl: string, t: Theme): maplibregl.StyleSpec
         paint: { 'circle-color': t.trafficSignal, 'circle-radius': 3.5, 'circle-stroke-color': '#000', 'circle-stroke-width': 0.5 },
       },
       {
+        id: 'incidents-segment', type: 'line', source: 'incidents',
+        filter: ['==', ['geometry-type'], 'LineString'],
+        layout: { 'line-cap': 'round' },
+        paint: { 'line-color': t.incident, 'line-width': 5, 'line-opacity': 0.8 },
+      },
+      {
         id: 'incidents-halo', type: 'circle', source: 'incidents',
+        filter: ['==', ['geometry-type'], 'Point'],
         paint: { 'circle-color': t.incident, 'circle-radius': 16, 'circle-opacity': 0.2 },
       },
       {
         id: 'incidents-dot', type: 'circle', source: 'incidents',
+        filter: ['==', ['geometry-type'], 'Point'],
         paint: { 'circle-color': t.incident, 'circle-radius': 7, 'circle-stroke-color': '#fff', 'circle-stroke-width': 1.5, 'circle-opacity': 0.95 },
       },
       {

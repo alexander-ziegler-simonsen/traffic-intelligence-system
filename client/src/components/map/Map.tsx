@@ -119,10 +119,10 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
 
         const vehicleFeats = map.queryRenderedFeatures(e.point, { layers: ['vehicles-bus', 'vehicles-train'] })
         if (vehicleFeats.length) {
-          const { type = '', route_name = '' } = vehicleFeats[0].properties ?? {}
+          const { type = '', vehicle_number = '' } = vehicleFeats[0].properties ?? {}
           const label = type === 'train' ? 'Train' : 'Bus'
           map.getCanvas().style.cursor = 'pointer'
-          setTooltip(route_name ? `${label} ${route_name}` : label)
+          setTooltip(vehicle_number ? `${label} ${vehicle_number}` : label)
           return
         }
 
@@ -197,6 +197,7 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
     map.setPaintProperty('roads-motorway', 'line-color', theme.roadMotorway)
     map.setPaintProperty('country-border', 'line-color', theme.border)
     map.setPaintProperty('rail', 'line-color', theme.rail)
+    map.setPaintProperty('incidents-segment', 'line-color', theme.incident)
     map.setPaintProperty('incidents-halo', 'circle-color', theme.incident)
     map.setPaintProperty('incidents-dot', 'circle-color', theme.incident)
     map.setPaintProperty('gtfs-bus-routes', 'line-color', theme.busRoute)
@@ -218,6 +219,7 @@ export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled 
     map.setLayoutProperty('vehicles-bus', 'visibility', v(settings.showBuses))
     map.setLayoutProperty('vehicles-train', 'visibility', v(settings.showTrains))
     map.setLayoutProperty('rail', 'visibility', v(settings.showRail))
+    map.setLayoutProperty('incidents-segment', 'visibility', v(settings.showIncidents))
     map.setLayoutProperty('incidents-halo', 'visibility', v(settings.showIncidents))
     map.setLayoutProperty('incidents-dot', 'visibility', v(settings.showIncidents))
     map.setLayoutProperty('gtfs-bus-routes', 'visibility', v(settings.showBusRoutes))

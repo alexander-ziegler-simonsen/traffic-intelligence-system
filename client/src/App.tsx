@@ -8,16 +8,14 @@ import { RouteProvider, useRoutes } from './context/RouteContext'
 import { MapProvider } from './context/MapContext'
 import { DrawProvider } from './context/DrawContext'
 import { useVehicles } from './hooks/useVehicles'
-import { useIncidents } from './hooks/useIncidents'
+import { useDisruptions } from './hooks/useDisruptions'
 import { useDraw } from './hooks/useDraw'
-
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:5162'
 
 function AppInner() {
   const { settings } = useSettings()
   const { disabledRoutes } = useRoutes()
-  const vehicles = useVehicles(API_URL, settings.vehiclesPollMs)
-  const incidents = useIncidents(API_URL, settings.incidentsPollMs)
+  const vehicles = useVehicles(settings.vehiclesPollMs)
+  const incidents = useDisruptions(settings.incidentsPollMs)
   const { mode: drawMode } = useDraw()
 
   return (
