@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import type { FeatureCollection } from 'geojson'
+import { Alert, Button, Group, Tooltip } from '@mantine/core'
 import { themes, defaultThemeId } from '../themes'
 import { useSettings } from '../context/SettingsContext'
+import { useMapInstance } from '../hooks/useMapInstance'
 import { DENMARK_CLIP, buildMapStyle } from '../config/mapStyle'
 import './Map.css'
 
@@ -54,16 +56,12 @@ const CITIES = [
   { label: 'Køge', center: [12.18, 55.46] as [number, number], zoom: 12 },
 ]
 
-interface Tooltip {
-  x: number
-  y: number
-  text: string
-}
-
 interface Props {
   vehicles: FeatureCollection
   incidents: FeatureCollection
   disabledRoutes: Set<string>
+  /** Turn off hover tooltips while another tool (e.g. drawing) owns the pointer and cursor */
+  hoverEnabled?: boolean
 }
 
 const ROUTE_LAYERS = [
@@ -74,13 +72,15 @@ const ROUTE_LAYERS = [
   'gtfs-light-rail-routes',
 ] as const
 
-export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
+export default function Map({ vehicles, incidents, disabledRoutes, hoverEnabled = true }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
   const loadedRef = useRef(false)
+  const hoverEnabledRef = useRef(hoverEnabled)
   const { settings } = useSettings()
+  const { setMap } = useMapInstance()
   const [martinDown, setMartinDown] = useState(false)
-  const [tooltip, setTooltip] = useState<Tooltip | null>(null)
+  const [tooltip, setTooltip] = useState<string | null>(null)
 
   const theme = themes[settings.themeId] ?? themes[defaultThemeId]
 
@@ -100,6 +100,7 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
     map.addControl(new maplibregl.NavigationControl(), 'top-right')
     map.on('load', () => {
       loadedRef.current = true
+      setMap(map)
 
       map.addImage('vehicle-bus',   createVehicleIcon('#16a34a', 'B'))
       map.addImage('vehicle-train', createVehicleIcon('#2563eb', 'T'))
@@ -111,15 +112,17 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
 
       // Single mousemove handler with priority: vehicle > route > stop > road name
       map.on('mousemove', (e) => {
+        if (!hoverEnabledRef.current) {
+          setTooltip(null)
+          return
+        }
+
         const vehicleFeats = map.queryRenderedFeatures(e.point, { layers: ['vehicles-bus', 'vehicles-train'] })
         if (vehicleFeats.length) {
           const { type = '', route_name = '' } = vehicleFeats[0].properties ?? {}
           const label = type === 'train' ? 'Train' : 'Bus'
           map.getCanvas().style.cursor = 'pointer'
-          setTooltip({
-            x: e.point.x, y: e.point.y,
-            text: route_name ? `${label} ${route_name}` : label,
-          })
+          setTooltip(route_name ? `${label} ${route_name}` : label)
           return
         }
 
@@ -128,10 +131,7 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
           const { name = '', agency = '', direction = 0 } = routeFeats[0].properties ?? {}
           const arrow = direction === 1 ? ' ←' : ' →'
           map.getCanvas().style.cursor = 'pointer'
-          setTooltip({
-            x: e.point.x, y: e.point.y,
-            text: agency ? `${name}${arrow} — ${agency}` : `${name}${arrow}`,
-          })
+          setTooltip(agency ? `${name}${arrow} — ${agency}` : `${name}${arrow}`)
           return
         }
 
@@ -140,7 +140,7 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
           const { name = '' } = stopFeats[0].properties ?? {}
           if (name) {
             map.getCanvas().style.cursor = 'pointer'
-            setTooltip({ x: e.point.x, y: e.point.y, text: name })
+            setTooltip(name)
             return
           }
         }
@@ -151,7 +151,7 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
           const text = (props['name:latin'] as string) || (props['ref'] as string) || ''
           if (text) {
             map.getCanvas().style.cursor = 'default'
-            setTooltip({ x: e.point.x, y: e.point.y, text })
+            setTooltip(text)
             return
           }
         }
@@ -166,12 +166,17 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
     mapRef.current = map
 
     return () => {
+      setMap(null)
       map.remove()
       mapRef.current = null
       loadedRef.current = false
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    hoverEnabledRef.current = hoverEnabled
+  }, [hoverEnabled])
 
   // Apply theme colours whenever theme changes
   useEffect(() => {
@@ -273,17 +278,16 @@ export default function Map({ vehicles, incidents, disabledRoutes }: Props) {
 
   return (
     <div className="map-wrapper">
-      <div ref={containerRef} className="map-container" />
-      <div className="city-nav">
+      <Tooltip.Floating label={tooltip} disabled={!hoverEnabled || !tooltip} color="dark.7" className="map-tooltip">
+        <div ref={containerRef} className="map-container" />
+      </Tooltip.Floating>
+      <Group className="city-nav" gap={6} justify="center">
         {CITIES.map(city => (
-          <button key={city.label} className="city-btn" onClick={() => flyToCity(city.center, city.zoom)}>{city.label}</button>
+          <Button key={city.label} size="xs" variant="default" style={{ boxShadow: 'var(--mantine-shadow-sm)' }} onClick={() => flyToCity(city.center, city.zoom)}>{city.label}</Button>
         ))}
-      </div>
-      {tooltip && (
-        <div className="map-tooltip" style={{ left: tooltip.x + 14, top: tooltip.y - 32 }}>{tooltip.text}</div>
-      )}
+      </Group>
       {martinDown && (
-        <div className="martin-banner">Map tiles unavailable — Martin tile server is not running</div>
+        <Alert className="martin-banner" variant="filled" color="red" py="xs">Map tiles unavailable — Martin tile server is not running</Alert>
       )}
     </div>
   )

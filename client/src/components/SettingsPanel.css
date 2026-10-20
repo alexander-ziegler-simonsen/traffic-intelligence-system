@@ -1,0 +1,27 @@
+/* Theme preview swatch */
+
+.theme-preview {
+  display: block;
+  width: 100%;
+  height: 28px;
+  border-radius: 4px;
+  background: var(--theme-bg, #0d1117);
+  border-top: 3px solid var(--theme-road, #e94560);
+}
+
+/* Route/line legend icons */
+
+.line-icon {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.line-icon.dashed {
+  background: repeating-linear-gradient(to right,
+      var(--line-color, #4a90d9) 0,
+      var(--line-color, #4a90d9) 4px,
+      transparent 4px,
+      transparent 7px) !important;
+}
