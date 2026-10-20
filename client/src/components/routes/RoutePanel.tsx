@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 import { Accordion, ActionIcon, Affix, Button, Checkbox, CloseButton, Divider, Group, Paper, ScrollArea, SegmentedControl, SimpleGrid, Stack, Text, TextInput, Title } from '@mantine/core'
-import { useRoutes, ROUTE_MODES, type RouteMode, type RouteEntry } from '../context/RouteContext'
+import { useRoutes, ROUTE_MODES, type RouteMode, type RouteEntry } from '../../context/RouteContext'
 import './RoutePanel.css'
 
 const MODE_OPTIONS = ROUTE_MODES.map(m => ({ value: m.id, label: m.label }))

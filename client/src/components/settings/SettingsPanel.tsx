@@ -1,7 +1,7 @@
 import { useState, type CSSProperties, type ReactNode } from 'react'
 import { ActionIcon, Affix, Checkbox, ColorSwatch, Group, Paper, Radio, Select, SimpleGrid, Slider, Stack, Text, Title } from '@mantine/core'
-import { themes } from '../themes'
-import { useSettings } from '../context/SettingsContext'
+import { themes } from '../../themes'
+import { useSettings } from '../../context/SettingsContext'
 import './SettingsPanel.css'
 
 function Section({ title, children }: { title: string; children: ReactNode }) {

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { ActionIcon, Affix, Paper, Stack, Text, Toolbar } from '@mantine/core'
 import { IconArrowBackUp, IconArrowForwardUp, IconPencil, IconTrash } from '@tabler/icons-react'
-import { DRAW_TOOLS, type DrawMode } from '../config/drawTools'
-import { useDraw } from '../hooks/useDraw'
+import { DRAW_TOOLS, type DrawMode } from '../../config/drawTools'
+import { useDraw } from '../../hooks/useDraw'
 
 export default function DrawToolbar() {
   const [open, setOpen] = useState(false)
