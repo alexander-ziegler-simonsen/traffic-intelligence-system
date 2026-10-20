@@ -1,47 +1,80 @@
 # Dockerfile.setup — builds a self-contained setup image with all required tools.
-# Tilemaker and tippecanoe are compiled from source so no host installs are needed.
+# tilemaker and tippecanoe are compiled from source, so no host installs are needed.
 #
-# Build:  docker build -f setup/Dockerfile.setup -t traffic-setup .
-# Run:    docker run --rm -v "$(pwd):/app" traffic-setup
-#         (Windows PS) docker run --rm -v "${PWD}:/app" traffic-setup
+# Build:
+#   docker build -f setup/Dockerfile.setup -t traffic-setup .
+#
+# Run:
+#   docker run --rm -v "$(pwd):/app" traffic-setup     # bash / zsh
+#   docker run --rm -v "${PWD}:/app" traffic-setup     # PowerShell
 
-# Stage 1: build tilemaker (mirrors their own Dockerfile)
-FROM debian:bookworm-slim AS tilemaker-build
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates build-essential git cmake \
-    liblua5.1-0-dev libsqlite3-dev libshp-dev rapidjson-dev \
-    libboost-program-options-dev libboost-filesystem-dev libboost-system-dev \
-    luarocks \
+ARG BASE_IMAGE=debian:bookworm-slim
+
+
+# 1 tilemaker
+FROM ${BASE_IMAGE} AS tilemaker-build
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        ca-certificates \
+        cmake \
+        git \
+        libboost-filesystem-dev \
+        libboost-program-options-dev \
+        libboost-system-dev \
+        liblua5.1-0-dev \
+        libshp-dev \
+        libsqlite3-dev \
+        luarocks \
+        rapidjson-dev \
     && rm -rf /var/lib/apt/lists/* \
     && luarocks install luaflock
-RUN git clone --depth 1 https://github.com/systemed/tilemaker.git /tmp/tilemaker
-RUN cd /tmp/tilemaker \
-    && mkdir build && cd build \
-    && cmake -DCMAKE_BUILD_TYPE=Release -DBoost_USE_DEBUG_RUNTIME=OFF .. \
-    && cmake --build . --parallel $(nproc) \
-    && strip tilemaker
 
-# Stage 2: build tippecanoe
-FROM debian:bookworm-slim AS tippecanoe-build
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates build-essential git libsqlite3-dev zlib1g-dev \
-    && rm -rf /var/lib/apt/lists/*
-RUN git clone --depth 1 https://github.com/felt/tippecanoe.git /tmp/tippecanoe
-RUN cd /tmp/tippecanoe && make -j$(nproc) && strip tippecanoe
+WORKDIR /tmp/tilemaker
+RUN git clone --depth 1 https://github.com/systemed/tilemaker.git .
+RUN cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBoost_USE_DEBUG_RUNTIME=OFF \
+    && cmake --build build --parallel "$(nproc)" \
+    && strip build/tilemaker
 
-# Final image — only the binaries and runtime deps
-FROM debian:bookworm-slim
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates liblua5.1-0 shapelib libsqlite3-0 \
-    libboost-filesystem1.74.0 libboost-program-options1.74.0 \
-    gdal-bin python3 curl unzip \
+# 2 tippecanoe
+FROM ${BASE_IMAGE} AS tippecanoe-build
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        ca-certificates \
+        git \
+        libsqlite3-dev \
+        zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=tilemaker-build /tmp/tilemaker/build/tilemaker /usr/local/bin/tilemaker
-COPY --from=tilemaker-build /usr/local/lib/lua/5.1/flock.so /usr/local/lib/lua/5.1/flock.so
-COPY --from=tilemaker-build /tmp/tilemaker/process.lua /tilemaker/process.lua
-COPY --from=tilemaker-build /tmp/tilemaker/resources /tilemaker/resources
-COPY --from=tippecanoe-build /tmp/tippecanoe/tippecanoe /usr/local/bin/tippecanoe
+WORKDIR /tmp/tippecanoe
+RUN git clone --depth 1 https://github.com/felt/tippecanoe.git .
+RUN make -j"$(nproc)" && strip tippecanoe
+
+# Final image: only the built binaries and their runtime deps
+FROM ${BASE_IMAGE}
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        gdal-bin \
+        libboost-filesystem1.74.0 \
+        libboost-program-options1.74.0 \
+        liblua5.1-0 \
+        libsqlite3-0 \
+        python3 \
+        shapelib \
+        unzip \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=tilemaker-build  /tmp/tilemaker/build/tilemaker   /usr/local/bin/
+COPY --from=tilemaker-build  /usr/local/lib/lua/5.1/flock.so  /usr/local/lib/lua/5.1/
+COPY --from=tilemaker-build  /tmp/tilemaker/process.lua       /tilemaker/
+COPY --from=tilemaker-build  /tmp/tilemaker/resources         /tilemaker/resources
+COPY --from=tippecanoe-build /tmp/tippecanoe/tippecanoe       /usr/local/bin/
 
 WORKDIR /app
 ENTRYPOINT ["bash", "/app/setup/setup-entrypoint.sh"]
