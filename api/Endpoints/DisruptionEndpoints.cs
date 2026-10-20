@@ -12,6 +12,8 @@ public static class DisruptionEndpoints
         group.MapGet("/", GetAllDisruptionsAsync);
         group.MapGet("/{id}", GetDisruptionByIdAsync);
         group.MapPost("/", CreateDisruptionAsync);
+        // what a disruption would block, without saving it
+        group.MapPost("/impact", GetDisruptionImpactAsync);
         group.MapPut("/{id}", UpdateDisruptionAsync);
         group.MapDelete("/{id}", DeleteDisruptionAsync);
     }
@@ -36,6 +38,12 @@ public static class DisruptionEndpoints
     {
         var createdDisruption = await disruptionService.CreateDisruptionAsync(disruption);
         return Results.Created($"/disruptions/{createdDisruption.Id}", createdDisruption);
+    }
+
+    private static async Task<IResult> GetDisruptionImpactAsync(DisruptionInput disruption, IDisruptionService disruptionService)
+    {
+        var impact = await disruptionService.GetDisruptionImpactAsync(disruption);
+        return Results.Ok(impact);
     }
 
     private static async Task<IResult> UpdateDisruptionAsync(Guid id, DisruptionInput disruption, IDisruptionService disruptionService)

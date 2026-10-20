@@ -23,6 +23,11 @@ builder.Services.AddDbContext<TisDbContext>(options => options.UseNpgsql(
 builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.Converters.Add(new GeoJsonConverterFactory(NtsGeometryServices.Instance.CreateGeometryFactory(4326))));
 
+// the client runs on its own origin (Vite dev server), so the browser needs CORS to call the API
+var clientOrigins = builder.Configuration.GetSection("Cors:ClientOrigins").Get<string[]>() ?? [];
+builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
+    policy.WithOrigins(clientOrigins).AllowAnyHeader().AllowAnyMethod()));
+
 // mapper
 builder.Services.AddSingleton<StopMapper>();
 builder.Services.AddSingleton<VehicleTypeMapper>();
@@ -60,6 +65,8 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+// before the HTTPS redirect, so preflight requests get answered instead of redirected
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.MapVehicleTypeEndpoints();

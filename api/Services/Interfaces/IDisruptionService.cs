@@ -8,6 +8,7 @@ public interface IDisruptionService
 {
     public Task<DisruptionOutput?> GetDisruptionByIdAsync(Guid disruptionId);
     public Task<List<DisruptionOutput>> GetAllDisruptionsAsync();
+    public Task<DisruptionImpactOutput> GetDisruptionImpactAsync(DisruptionInput disruptionInput);
     public Task<DisruptionOutput> CreateDisruptionAsync(DisruptionInput disruptionInput);
     public Task<DisruptionOutput?> UpdateDisruptionAsync(Guid disruptionId, DisruptionInput disruptionInput);
     public Task<bool> DeleteDisruptionAsync(Guid disruptionId);

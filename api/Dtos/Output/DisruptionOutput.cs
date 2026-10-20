@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using NetTopologySuite.Geometries;
-using api.Models;
 
 namespace api.Dtos.Output;
 
@@ -20,10 +19,4 @@ public partial class DisruptionOutput
     public DateTime? ValidTo { get; set; }
 
     public DateTime CreatedAt { get; set; }
-
-    public virtual ICollection<DisruptionSegment> DisruptionSegments { get; set; } = new List<DisruptionSegment>();
-
-    public virtual ICollection<DisruptionStop> DisruptionStops { get; set; } = new List<DisruptionStop>();
-
-    public virtual ICollection<JourneyPathVersion> JourneyPathVersions { get; set; } = new List<JourneyPathVersion>();
 }
