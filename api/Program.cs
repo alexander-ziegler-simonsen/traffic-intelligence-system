@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using NetTopologySuite;
+using NetTopologySuite.IO.Converters;
 using Scalar.AspNetCore;
 using api.data;
 using api.Endpoints;
@@ -12,8 +14,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// dbcontext
-builder.Services.AddDbContext<TisDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
+// dbcontext - NetTopologySuite maps PostGIS geometry columns
+builder.Services.AddDbContext<TisDbContext>(options => options.UseNpgsql(
+    builder.Configuration.GetConnectionString("Postgres"),
+    npgsql => npgsql.UseNetTopologySuite()));
+
+// geometries are sent and returned as GeoJSON, lng/lat (SRID 4326 like the PostGIS columns)
+builder.Services.ConfigureHttpJsonOptions(options =>
+    options.SerializerOptions.Converters.Add(new GeoJsonConverterFactory(NtsGeometryServices.Instance.CreateGeometryFactory(4326))));
 
 // mapper
 builder.Services.AddSingleton<StopMapper>();

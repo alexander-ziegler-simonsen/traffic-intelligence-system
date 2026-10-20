@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NetTopologySuite.Geometries;
 using api.Models;
 
 namespace api.Dtos.Output;
@@ -11,6 +12,8 @@ public partial class DisruptionOutput
     public string Cause { get; set; } = null!;
 
     public string? Description { get; set; }
+
+    public Geometry? Geometry { get; set; }
 
     public DateTime ValidFrom { get; set; }
 

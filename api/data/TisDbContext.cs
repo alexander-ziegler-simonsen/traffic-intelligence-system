@@ -42,11 +42,15 @@ public partial class TisDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.HasPostgresExtension("postgis");
+
         modelBuilder.Entity<Disruption>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("disruption_pkey");
 
             entity.ToTable("disruption");
+
+            entity.HasIndex(e => e.Geometry, "disruption_geometry_idx").HasMethod("gist");
 
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("uuidv7()")
@@ -58,6 +62,9 @@ public partial class TisDbContext : DbContext
                 .HasDefaultValueSql("now()")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Geometry)
+                .HasColumnType("geometry(Geometry,4326)")
+                .HasColumnName("geometry");
             entity.Property(e => e.ValidFrom).HasColumnName("valid_from");
             entity.Property(e => e.ValidTo).HasColumnName("valid_to");
         });
